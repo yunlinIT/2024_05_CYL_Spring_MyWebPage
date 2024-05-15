@@ -9,7 +9,7 @@
 <style>
 
 header {
-        display: none;
+   display: none;
 }
 
 
@@ -135,7 +135,7 @@ body {
 <div class="box-detail">
 	<div class="p-title">Portfolio*</div>
 	<div class="shot-dest">I'm a Back-end and Front-end web developer Chang Yun Lin</div>
-	<a href="https://www.notion.so/71ac04e5b13a4a27ba2b90d86da6e73a" class="button">More about me</a>
+	<a href="/usr/home/aboutMe" class="button">More about me</a>
 </div>
 
 
