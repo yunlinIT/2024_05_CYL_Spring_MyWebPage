@@ -8,6 +8,8 @@ public class UsrHomeController {
 
 	@RequestMapping("/usr/home/main")
 	public String showMain() {
+		
+		
 
 		return "/usr/home/main";
 	}
