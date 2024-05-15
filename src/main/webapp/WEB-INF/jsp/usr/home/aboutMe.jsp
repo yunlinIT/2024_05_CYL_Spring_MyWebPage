@@ -59,7 +59,7 @@ header {
 	flex-direction: column;
 	align-items: center;
 	/*     padding: 57px 80px; */
-	/*     margin-top: -350px; */
+/* 	     margin-top: -80px;  */
 }
 
 @media ( max-width : 991px) {
@@ -105,10 +105,11 @@ header {
 	aspect-ratio: 0.79;
 	object-fit: cover;
 	object-position: center;
-	width: 100%;
+	width: 300px;
 	margin-top: 38px;
 	flex-grow: 1;
 	border-radius: 20px;
+	max-height: 370px;
 }
 
 @media ( max-width : 991px) {
@@ -253,6 +254,7 @@ header {
 	margin-top: 20px;
 	padding: 0 200px 0 6px;
 	font: 600 20px Pretendard, sans-serif;
+	margin-top:-35px;
 }
 
 @media ( max-width : 991px) {
@@ -262,13 +264,15 @@ header {
 }
 
 .skills-img {
-	aspect-ratio: 0.82;
-	object-fit: auto;
-	object-position: center;
-	width: 100%;
-	flex-grow: 1;
-	margin-top: -3px;
+    aspect-ratio: 0.82;
+    object-fit: auto;
+    object-position: center;
+    width: 330px;
+    height: 310px; /* 높이를 원하는 값으로 설정 */
+    flex-grow: 1;
+    margin-top: -3px;
 }
+
 
 @media ( max-width : 991px) {
 	.skills-img {
@@ -296,7 +300,7 @@ header {
 	font-size: 20px;
 	color: #111;
 	font-weight: 600;
-	margin-top: 19px;
+
 	margin-left: 50px;
 }
 
@@ -338,7 +342,7 @@ header {
 
 
 	<div id="container">
-		<div class="toMain" style="margin-left: 90%; margin-top: 5%;">
+		<div class="toMain" style="margin-left: 90%; margin-top: 2%;">
 			<a href="/usr/home/main" class="button">BACK TO MAIN</a>
 		</div>
 
@@ -395,7 +399,7 @@ header {
 							<aside class="left-column">
 								<h2 class="skills-header">Skills</h2>
 								<img loading="lazy"
-									src="https://cdn.builder.io/api/v1/image/assets/TEMP/93edb5ad056a54adb157bbe65261fbceef3ac7b32ecca8945ad4b91e8594a865?apiKey=725f06f0daeb4ab382150ea4b4cf3550&"
+									src="https://velog.velcdn.com/images/yunlinit/post/535521e8-26a7-48df-83bc-1971fdb457df/image.png"
 									class="skills-img" alt="Skills Image" />
 							</aside>
 							<div class="additional-info">
