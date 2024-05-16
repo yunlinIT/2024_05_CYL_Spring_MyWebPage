@@ -4,482 +4,207 @@
 <%@ include file="../common/head.jspf"%>
 
 
+<script>
+// 페이지가 로드될 때 애니메이션 함수 호출
+window.addEventListener("load", function () {
+  // 스크롤 이벤트 리스너 추가
+  window.addEventListener("scroll", revealText);
+  // 페이지 로드 후 한 번 애니메이션 실행
+  revealText();
+});
+
+function revealText() {
+  // .text-column 요소를 선택
+  var textColumn = document.querySelector(".text-column");
+  // 요소가 화면에 보일 때 애니메이션 적용
+  if (isElementInViewport(textColumn)) {
+    textColumn.classList.add("reveal");
+    // 스크롤 이벤트 리스너 제거 (한 번만 애니메이션 실행)
+    window.removeEventListener("scroll", revealText);
+  }
+}
+
+// 요소가 화면에 보이는지 여부를 확인하는 함수
+function isElementInViewport(el) {
+  var rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+</script>
 
 <style>
-
-/* 노말라이즈 */
-body, ul, li, h1 {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-
-header {
-	display: none;
-	position: fixed;
-	top: 0;
-	width: 100%;
-	z-index: 1000;
-	background-color: white; /* 투명한 배경색 설정 */
-}
-
-/* 반응형 텍스트 크기 조정 */
-@media ( max-width : 991px) {
-	.text {
-		font-size: 20px; /* 화면 크기가 991px 이하일 때 텍스트 크기를 줄입니다. */
-		margin-top: 65px;
-	}
-}
-
-/* 아래부분 */
-.section {
-	display: flex;
-	justify-content: center;
-}
-
-/* ABOUT ME */
+/* 공통 스타일 */
 .container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: #fff;
-	padding: 72px 60px;
+  background-color: #fff;
+  position: fixed; /* 화면 중앙에 고정시킵니다. */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* 가운데 정렬을 위해 사용합니다. */
+  padding: 200px 60px;
 }
 
-@media ( max-width : 991px) {
-	.container {
-		padding: 0 20px;
-	}
+@media (max-width: 991px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+.inner-wrapper {
+  margin-top: 35px;
+  width: 100%;
+  max-width: 1566px;
+}
+
+@media (max-width: 991px) {
+  .inner-wrapper {
+    max-width: 100%;
+  }
+}
+
+.flex-container {
+  gap: 20px;
+  display: flex;
+}
+
+@media (max-width: 991px) {
+  .flex-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0px;
+  }
+}
+
+.text-column {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 73%;
+  margin-left: 0px;
+  /* 텍스트가 처음에 투명하게 설정되도록 합니다. */
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+@media (max-width: 991px) {
+  .text-column {
+    width: 100%;
+  }
+}
+
+/* reveal 클래스가 추가되면 텍스트가 나타나도록 설정합니다. */
+.text-column.reveal {
+  opacity: 1;
 }
 
 .content-wrapper {
-	background-color: #fff;
-	width: 100%;
-	max-width: 1000px;
-	flex-direction: column;
-	align-items: center;
-	/*     padding: 57px 80px; */
-/* 	     margin-top: -80px;  */
+  justify-content: center;
+  background-color: #fff;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  width: 92%;
+  padding: 80px 27px;
 }
 
-@media ( max-width : 991px) {
-	.content-wrapper {
-		max-width: 100%;
-		padding: 0 20px;
-	}
+@media (max-width: 991px) {
+  .content-wrapper {
+    max-width: 100%;
+    margin-top: 40px;
+    padding: 0 20px;
+  }
 }
 
-.content-section {
-	width: 953px;
-	max-width: 100%;
+.greeting {
+  color: #000; /* #black 대신 #000을 사용합니다. */
+  font: 700 50px/120% Roboto, sans-serif;
 }
 
-.content-columns {
-	display: flex;
-	gap: 20px;
+.light-text {
+  color: rgba(94, 59, 238, 1);
 }
 
-@media ( max-width : 991px) {
-	.content-columns {
-		flex-direction: column;
-		align-items: stretch;
-		gap: 0px;
-	}
+@media (max-width: 991px) {
+  .greeting {
+    max-width: 100%;
+    font-size: 40px; /* size 대신 font-size를 사용합니다. */
+  }
 }
 
-.left-column {
-	display: flex;
-	flex-direction: column;
-	line-height: normal;
-	width: 37%;
-	margin-left: 0px;
+.description {
+  color: var(--Body, #1c1e53);
+  font: 400 24px/36px Roboto, sans-serif;
 }
 
-@media ( max-width : 991px) {
-	.left-column {
-		width: 100%;
-	}
+@media (max-width: 991px) {
+  .description {
+    max-width: 100%;
+  }
 }
 
-.profile-img {
-	aspect-ratio: 0.79;
-	object-fit: cover;
-	object-position: center;
-	width: 300px;
-	margin-top: 38px;
-	flex-grow: 1;
-	border-radius: 20px;
-	max-height: 370px;
+.image-column {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 18%;
+margin-top:-20px;
+margin-left: -50px;
 }
 
-@media ( max-width : 991px) {
-	.profile-img {
-		margin-top: 40px;
-	}
+@media (max-width: 991px) {
+  .image-column {
+    width: 100%;
+  }
 }
 
-.right-column {
-	display: flex;
-	flex-direction: column;
-	line-height: normal;
-	width: 63%;
-	margin-left: 20px;
+.responsive-img {
+  aspect-ratio: 0.97;
+  object-fit: auto;
+  object-position: center;
+  width: 100%;
+  margin-top: 67px;
 }
 
-@media ( max-width : 991px) {
-	.right-column {
-		width: 100%;
-	}
+@media (max-width: 991px) {
+  .responsive-img {
+    margin-top: 60px;
+  }
 }
-
-.intro-section {
-	display: flex;
-	flex-grow: 1;
-	flex-direction: column;
-	font-size: 15px;
-	font-weight: 600;
-	margin-left: 50px;
-}
-
-@media ( max-width : 991px) {
-	.intro-section {
-		max-width: 100%;
-		margin-top: 40px;
-	}
-}
-
-.intro-header {
-	color: #668efd;
-	text-align: center;
-	align-self: center;
-	font: 28px Pretendard, sans-serif;
-	font-weight: 600;
-}
-
-@media ( max-width : 991px) {
-	.intro-header {
-		max-width: 100%;
-	}
-}
-
-.intro-description {
-	color: #111;
-	text-align: center;
-	font-family: Pretendard, sans-serif;
-	font-weight: 400;
-	line-height: 20px;
-	margin-top: 15px;
-}
-
-@media ( max-width : 991px) {
-	.intro-description {
-		max-width: 100%;
-	}
-}
-
-.info-header {
-	color: #111;
-	margin-top: 65px;
-	font: 20px Pretendard, sans-serif;
-	font-weight: 600;
-}
-
-@media ( max-width : 991px) {
-	.info-header {
-		max-width: 100%;
-		margin-top: 40px;
-	}
-}
-
-.contact-info {
-	color: #111;
-	font-family: Pretendard, sans-serif;
-	align-self: start;
-	gap: 20px;
-	font-weight: 400;
-	line-height: 20px;
-	justify-content: space-between;
-
-}
-
-.education-header {
-	color: #111;
-	margin-top: 38px;
-	font: 20px Pretendard, sans-serif;
-	font-weight: 600;
-}
-
-@media ( max-width : 991px) {
-	.education-header {
-		max-width: 100%;
-		margin-top: 40px;
-	}
-}
-
-.education-details {
-	color: #111;
-	font-family: Pretendard, sans-serif;
-	font-weight: 400;
-	line-height: 20px;
-	margin-top: -1px;
-}
-
-@media ( max-width : 991px) {
-	.education-details {
-		max-width: 100%;
-	}
-}
-
-.skills-section {
-	margin-top: 8px;
-	width: 953px;
-	max-width: 100%;
-}
-
-.skills-wrapper {
-	display: flex;
-	gap: 20px;
-}
-
-@media ( max-width : 991px) {
-	.skills-wrapper {
-		flex-direction: column;
-		align-items: stretch;
-		gap: 0px;
-	}
-}
-
-.skills-header {
-	color: #111;
-	margin-top: 20px;
-	padding: 0 200px 0 6px;
-	font: 600 20px Pretendard, sans-serif;
-	margin-top:-35px;
-}
-
-@media ( max-width : 991px) {
-	.skills-header {
-		max-width: 100%;
-	}
-}
-
-.skills-img {
-    aspect-ratio: 0.82;
-    object-fit: auto;
-    object-position: center;
-    width: 330px;
-    height: 310px; /* 높이를 원하는 값으로 설정 */
-    flex-grow: 1;
-    margin-top: -3px;
-}
-
-
-@media ( max-width : 991px) {
-	.skills-img {
-		margin-top: 40px;
-	}
-}
-
-.additional-info {
-	display: flex;
-	flex-direction: column;
-	line-height: normal;
-	width: 63%;
-	margin-left: 20px;
-}
-
-@media ( max-width : 991px) {
-	.additional-info {
-		width: 100%;
-	}
-}
-
-.section-header {
-	display: flex;
-	flex-direction: column;
-	font-size: 20px;
-	color: #111;
-	font-weight: 600;
-
-	margin-left: 50px;
-}
-
-@media ( max-width : 991px) {
-	.section-header {
-		max-width: 100%;
-		margin-top: 40px;
-	}
-}
-
-.education-header .extras-header {
-	font-family: Pretendard, sans-serif;
-	margin-top: 14px;
-	font-weight: 600;
-}
-
-.education-details {
-	margin-top: 1px;
-	font: 400 15px/20px Pretendard, sans-serif;
-}
-
-.extras-header {
-	font-family: Pretendard, sans-serif;
-	margin-top: 45px;
-	font-weight: 600;
-}
-
-.extras-details {
-	margin-top: 2px;
-	font: 400 15px/20px Pretendard, sans-serif;
-}
-
-/* PROJECTS */
 </style>
 
 </head>
 
 <body>
 
+<div class="container">
+  <div class="inner-wrapper">
+    <section class="flex-container">
+      <article class="text-column">
+        <div class="content-wrapper">
+          <h1 class="greeting">
+            👋🏼 안녕하세요,
+            <span class="light-text">웹개발자</span> 장윤린입니다.
+          </h1>
+          <p class="description">
+            포트폴리오는 제가 걸어온 여정과 끊임없는 발전을 담아냈습니다. 새로운 기술을 배우고 실험하는 것을 즐기며, 개인 프로젝트 뿐만 아니라 팀 프로젝트 경험을 통해 협업 능력도 키워왔습니다. 앞으로 개발자로서 성장하며 사용자 중심의
+            서비스를 만들어나가고 싶습니다.
+            <br />
+          </p>
+        </div>
+      </article>
+      <div class="image-column">
+        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/87d9479f2a58d7e8e6693208480ac0f0c0d46745659eeee9d8bf929383540831?apiKey=725f06f0daeb4ab382150ea4b4cf3550&" class="responsive-img" alt="Image representing 웹개발 자 장윤린" />
+      </div>
+    </section>
+  </div>
+</div>
 
-	<div id="container">
-		<div class="toMain" style="margin-left: 90%; margin-top: 2%;">
-			<a href="/usr/home/main" class="button">BACK TO MAIN</a>
-		</div>
-
-		<!-- begin section -->
-		<div class="section">
-			<section class="container">
-				<article class="content-wrapper">
-					<div class="content-section">
-						<div class="content-columns">
-							<aside class="left-column">
-								<img loading="lazy"
-									src="https://cdn.builder.io/api/v1/image/assets/TEMP/82de145c70d67ec4178068b6c1693841486d243bfe6aee2fd6ac8951fa87787b?apiKey=725f06f0daeb4ab382150ea4b4cf3550&"
-									class="profile-img" alt="Profile Image" />
-							</aside>
-							<div class="right-column">
-								<section class="intro-section">
-									<h1 class="intro-header">
-										안녕하세요, 성장하는 웹개발자
-										<span>장윤린입니다!</span>
-									</h1>
-									<p class="intro-description">이 포트폴리오는 제가 걸어온 여정과 끊임없는 발전을 담아냈습니다. 새로운 기술을 배우고 실험하는 것을 즐기며, 개인 프로젝트 뿐만 아니라 팀
-										프로젝트 경험을 통해 협업 능력도 키워왔습니다. 앞으로 개발자로서 성장하며 사용자 중심의 서비스를 만들어 나가고 싶습니다.</p>
-									<h2 class="info-header">Information</h2>
-									<address class="contact-info">
-										<p>
-											👩🏻‍💻 장윤린
-											<br />
-											<a href="mailto:yunlinit@gmail.com">✉️ yunlinit@gmail.com</a>
-											<br />
-											📞 010-4249-0977</a>
-											<br />
-											<a href="https://github.com/yunlinIT">🐈‍⬛ GitHub</a>
-											<br />
-											<a href="https://velog.io/@yunlinit/">🧩 Velog</a>
-											<br />
-											<a href="https://www.youtube.com/@yunlinit">🎬 YouTube</a>
-											<br />
-										</p>
-									</address>
-									<h3 class="education-header">교육과정</h3>
-									<p class="education-details">
-										코리아IT아카데미 Java 과정 | 2023.10.11 ~ 2023.11.07
-										<br />
-										코리아IT아카데미 DBMS 과정 | 2023.11.08 ~ 2023.12.05
-										<br />
-										프롬프트AI & Open API & 공공데이터를 활용한 웹/앱 개발자 양성 과정 | 2023.12.07 ~ 2024.05.24
-									</p>
-								</section>
-							</div>
-						</div>
-					</div>
-					<section class="skills-section">
-						<div class="skills-wrapper">
-							<aside class="left-column">
-								<h2 class="skills-header">Skills</h2>
-								<img loading="lazy"
-									src="https://velog.velcdn.com/images/yunlinit/post/535521e8-26a7-48df-83bc-1971fdb457df/image.png"
-									class="skills-img" alt="Skills Image" />
-							</aside>
-							<div class="additional-info">
-								<section class="section-header">
-									<h3 class="education-header">학력</h3>
-									<p class="education-details">
-										University of Wisconsin-Madison (위스콘신주립대학교) | 2008.08 ~ 2009.12
-										<br />
-										대전국제학교 (고등학교) | 2006.08 ~ 2008.06
-									</p>
-									<h3 class="extras-header">기타 활동사항</h3>
-									<p class="extras-details">
-										동아어학원 - 유·초등부 담임강사, 교수부장 | 2017.03 ~ 2023.08
-										<br />
-										IBT어학원 - 초·중 영어강사 | 2011.08 ~ 2013.11
-										<br />
-										개인 영어과외 - 초·중·고 영어과외 | 2010.12 ~ 2018.01
-									</p>
-								</section>
-							</div>
-						</div>
-					</section>
-				</article>
-			</section>
-
-		</div>
-
-		<!-- end section -->
-
-
-
-
-	</div>
-
-
-
-
-
-
-	<script>
-		function writeEmailToYunlin() {
-			// 여기서는 예시로 mailto 링크를 사용하여 이메일 클라이언트를 열도록 하였습니다.
-			// 실제로는 백엔드와의 통신 등을 통해 이메일을 보내는 방법을 구현해야 할 수 있습니다.
-			window.location.href = "/usr/home/writeEmailToYunlin";
-		}
-	</script>
-
-
-	<script>
-		// Scroll animation using jQuery
-		// 		$(document).ready(function() {
-		// 			var win_h = $(window).height();
-
-		// 			$(".section").each(function(index) {
-		// 				$(this).attr("data-index", win_h * index);
-		// 			});
-
-		// 			$(".section").on("mousewheel", function(e) {
-		// 				var sectionPos = parseInt($(this).attr("data-index"));
-		// 				if (e.originalEvent.wheelDelta >= 0) {
-		// 					$("html, body").stop().animate({
-		// 						scrollTop : sectionPos - win_h
-		// 					});
-		// 					return false;
-		// 				} else if (e.originalEvent.wheelDelta < 0) {
-		// 					$("html,body").stop().animate({
-		// 						scrollTop : sectionPos + win_h
-		// 					});
-		// 					return false;
-		// 				}
-		// 			});
-		// 		});
-	</script>
-
-
-
-
-
-	</script>
 </body>
 </html>
 
-<%@ include file="../common/foot.jspf"%>
+
+<%-- <%@ include file="../common/foot.jspf"%> --%>
