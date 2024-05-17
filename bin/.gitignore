@@ -1,4 +1,4 @@
-HELP.md
+.classpath .project .settings bin build HELP.md
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
