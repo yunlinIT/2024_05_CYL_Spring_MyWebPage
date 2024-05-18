@@ -107,7 +107,7 @@ body {
 }
 
 /* For devices larger than 550px */
-@media ( min-width : 550px) {
+@media ( min-width : 1100px) {
 	.container {
 		width: 80%;
 	}
@@ -126,6 +126,7 @@ body {
 	.three.columns {
 		width: 22%;
 	}
+	
 	.four.columns {
 		width: 30.6666666667%;
 	}
@@ -279,12 +280,13 @@ p {
 /* Links
 ********************************************************************* */
 a {
-	color: #1EAEDB;
+	color: #000000;
 }
 
 a:hover {
-	color: #0FA0CE;
+	color: #A58EFF;
 }
+
 /* Header Section
 ********************************************************************* */
 header {
@@ -326,7 +328,6 @@ header {
 	line-height: 150%;
 }
 
-
 .title .icon {
 	color: #FFFFFF;
 	font-size: 50px;
@@ -359,18 +360,13 @@ header {
 @media only screen and (max-width: 766px) {
 	.main_nav {
 		padding-top: 25px;
-		display:none;
+		display: none;
 	}
 }
 
-
-
-
-
-
 .open-nav {
-/* 	max-height: 400px !important; */
-	display:hidden;
+	/* 	max-height: 400px !important; */
+	display: hidden;
 }
 
 .sticky {
@@ -446,7 +442,7 @@ nav ul a:hover {
 
 @media only screen and (max-width: 766px) {
 	.mobile-toggle {
-/* 		display: block; */
+		/* 		display: block; */
 		display: hidden;
 	}
 }
@@ -481,7 +477,6 @@ nav ul a:hover {
 	-moz-animation: fade_move_down 2s ease-in-out infinite;
 	animation: fade_move_down 2s ease-in-out infinite;
 }
-
 
 /* animated scroll arrow animation */
 /* @-webkit-keyframes fade_move_down { */
@@ -525,6 +520,7 @@ nav ul a:hover {
 /*         opacity: 0; */
 /*     } */
 /* } */
+
 
 
 /* animated scroll arrow animation */
@@ -571,289 +567,8 @@ nav ul a:hover {
 }
 
 
-
-
-
-/* About Section
+/* Intro Section
 ********************************************************************* */
-#about {
-	padding: 100px 0 100px 0;
-}
-
-/* Team Section
-********************************************************************* */
-#team {
-	padding: 50px 0 100px 0;
-}
-
-#team .icon {
-	font-size: 26px;
-}
-/* Skills Section
-********************************************************************* */
-#skills {
-	padding: 100px 0 100px 0;
-	background-color: ##FCF8FF;
-}
-
-/* Portfolio Section
-********************************************************************* */
-#portfolio {
-	padding: 150px 0 200px 0;
-}
-
-.image {
-	background-color: #5a5a5a;
-	width: 100%;
-	height: auto;
-	margin-left: auto;
-	margin-right: auto;
-	transition: .5s;
-}
-
-.image:hover {
-	opacity: 0.6;
-	transition: .3s;
-	background-image: url(../images/hoverbg.png);
-	background-repeat: no-repeat;
-	background-position: center;
-}
-
-
-
-/* Contact Section
-********************************************************************* */
-#contact {
-	padding: 100px 0 100px 0;
-}
-
-input[type="email"], input[type="number"], input[type="search"], input[type="text"],
-	input[type="tel"], input[type="url"], input[type="password"], textarea,
-	select {
-	height: 38px;
-	padding: 6px 10px;
-	/* The 6px vertically centers text on FF, ignored by Webkit */
-	background-color: #F5F5F5;
-	border: none;
-	box-shadow: none;
-	box-sizing: border-box;
-	border-radius: 0;
-	outline: none;
-}
-
-textarea {
-	min-height: 250px;
-}
-
-input[type="submit"] {
-	display: inline-block;
-	height: 38px;
-	padding: 0 30px;
-	color: #fff;
-	text-align: center;
-	font-size: 11px;
-	font-weight: 600;
-	line-height: 38px;
-	letter-spacing: .1rem;
-	text-transform: uppercase;
-	text-decoration: none;
-	white-space: nowrap;
-	background: #5fc3e4;
-	border-radius: 0px;
-	border: 0;
-	cursor: pointer;
-	box-sizing: border-box;
-}
-
-input[type="submit"]:hover {
-	background: #e55d87;
-	text-decoration: none;
-}
-/* Footer Section
-********************************************************************* */
-footer {
-	min-height: 120px;
-	padding: 40px 0 40px 0;
-	background: #f6dca5;
-	background: -moz-linear-gradient(-45deg, #cab6fa 0%, #f9dbad 100%);
-	background: -webkit-linear-gradient(-45deg, #cab6fa 0%, #f9dbad 100%);
-	background: linear-gradient(135deg, #cab6fa 0%, #f9dbad 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cab6fa',
-		endColorstr='#f9dbad', GradientType=1);
-	box-sizing: border-box;
-}
-
-footer p {
-	color: #FFFFFF;
-	margin: 20px 0 0 0;
-}
-
-.socialIcons {
-	font-size: 34px;
-	color: rgba(255, 255, 255, 0.7);
-}
-/* Lists
-********************************************************************* */
-ul {
-	list-style: circle inside;
-}
-
-ol {
-	list-style: decimal inside;
-}
-
-ol, ul {
-	padding-left: 0;
-	margin-top: 0;
-}
-
-ul ul, ul ol, ol ol, ol ul {
-	margin: 1.5rem 0 1.5rem 3rem;
-	font-size: 90%;
-}
-
-li {
-	margin-bottom: 1rem;
-}
-/* Spacing
-********************************************************************* */
-button, .button {
-	margin-bottom: 1rem;
-}
-
-input, textarea, select, fieldset {
-	margin-bottom: 1.5rem;
-}
-
-pre, blockquote, dl, figure, table, p, ul, ol, form {
-	margin-bottom: 2.5rem;
-}
-/* Utilities
-********************************************************************* */
-.u-full-width {
-	width: 100%;
-	box-sizing: border-box;
-}
-
-.u-max-full-width {
-	max-width: 100%;
-	box-sizing: border-box;
-}
-
-.u-pull-right {
-	float: right;
-}
-
-.u-pull-left {
-	float: left;
-}
-/* Clearing
-********************************************************************* */
-.container:after, .row:after, .u-cf {
-	content: "";
-	display: table;
-	clear: both;
-}
-/* Misc
-********************************************************************* */
-.icon {
-	padding-right: 10px;
-	color: #e55d87;
-}
-
-.block {
-	width: 70px;
-	height: 2px;
-	background: #e55d87; /* Old browsers */
-	background: -moz-linear-gradient(-45deg, #cab6fa 0%, #f9dbad 100%);
-	background: -webkit-linear-gradient(-45deg, #cab6fa 0%, #f9dbad 100%);
-	background: linear-gradient(135deg, #cab6fa 0%, #f9dbad 100%);
-	margin-bottom: 50px;
-}
-
-/* about 부분 */
-.profile-container {
-	
-}
-
-.profile-content {
-	display: flex;
-	gap: 20px;
-	margin-left: -20px;
-}
-
-@media ( max-width : 991px) {
-	.profile-content {
-		flex-direction: column;
-		align-items: stretch;
-		gap: 0;
-	}
-}
-
-
-.profile-image {
-	width: 100%;
-	flex-grow: 1;
-	object-fit: auto;
-	object-position: center;
-	aspect-ratio: 0.91;
-	object-fit: cover;
-	border-radius: 20px;
-}
-
-@media ( max-width : 991px) {
-	.profile-image {
-		max-width: 100%;
-		width: 200px;
-		margin-top: -80px;
-		margin-left: 30px;
-	}
-}
-
-.info-column {
-	display: flex;
-	flex-direction: column;
-	width: 63 margin-left: 20px;
-	margin-left: 50px;
-}
-
-@media ( max-width : 991px) {
-	.info-column {
-		width: 100%;
-	}
-}
-
-.profile-info {
-	color: #5e3bee;
-	/* 	padding-top: 39px; */
-	font: 500 22px/25px Inter, sans-serif;
-	width: 480px;
-	margin-top: 20px;
-}
-
-@media ( max-width : 991px) {
-	.profile-info {
-		max-width: 100%;
-		margin-top: 40px;
-	}
-}
-
-.highlight-text {
-	font-family: Pretendard-Regular;
-	font-weight: 400;
-	/* 	color: rgba(94, 59, 238, 1); */
-	color: #A58EFF;
-}
-
-.regular-text {
-	font-family: Pretendard-Regular;
-	color: black;
-	font-size: 15px;
-	line-height: 5px;
-	font-weight: 400;
-}
-
-/* intro */
 .container2 {
 	background-color: #fcf8ff;
 	display: flex;
@@ -864,14 +579,10 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 	padding: 50px 0px; /* 필요에 따라 주석을 해제 */
 }
 
-.container3 {
-	background-color: #fcf8ff;
-	height:
-}
-
 @media ( max-width : 991px) {
 	.container2 {
-/* 		padding: 0 20px; */
+		/* 		padding: 0 20px; */
+		
 	}
 }
 
@@ -975,23 +686,311 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 }
 
 .profile-image1 {
-    object-fit: auto;
-    object-position: center;
-    height: 400px;
-    width: 330px;
+	object-fit: auto;
+	object-position: center;
+	height: 400px;
+	width: 330px;
 }
 
-@media (max-width: 991px) {
-    .profile-image1 {
-       display:none
-    }
-    
-    /* 부모 요소에 text-align: center; 추가 */
-    .container2 {
-        text-align: center;
-    }
+@media ( max-width : 991px) {
+	.profile-image1 {
+		display: none
+	}
+
+	/* 부모 요소에 text-align: center; 추가 */
+	.container2 {
+		text-align: center;
+	}
 }
 
+/* About Section
+********************************************************************* */
+#about {
+	padding: 100px 0 100px 0;
+}
+
+.inline-block {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.profile-container {
+	
+}
+
+.profile-content {
+	display: flex;
+	gap: 20px;
+	margin-left: -20px;
+}
+
+@media ( max-width : 991px) {
+	.profile-content {
+		flex-direction: column;
+		align-items: stretch;
+		gap: 0;
+	}
+}
+
+.profile-image {
+	width: 100%;
+	flex-grow: 1;
+	object-fit: auto;
+	object-position: center;
+	aspect-ratio: 0.91;
+	object-fit: cover;
+	border-radius: 20px;
+}
+
+@media ( max-width : 991px) {
+	.profile-image {
+		max-width: 100%;
+		width: 200px;
+		margin-top: -80px;
+		margin-left: 30px;
+	}
+}
+
+.info-column {
+	display: flex;
+	flex-direction: column;
+	width: 63 margin-left: 20px;
+	margin-left: 50px;
+}
+
+@media ( max-width : 991px) {
+	.info-column {
+		width: 100%;
+	}
+}
+
+.profile-info {
+	color: #5e3bee;
+	/* 	padding-top: 39px; */
+	font: 500 22px/25px Inter, sans-serif;
+	width: 480px;
+	margin-top: 20px;
+}
+
+@media ( max-width : 991px) {
+	.profile-info {
+		max-width: 100%;
+		margin-top: 40px;
+	}
+}
+
+.highlight-text {
+	font-family: Pretendard-Regular;
+	font-weight: 400;
+	/* 	color: rgba(94, 59, 238, 1); */
+	color: #A58EFF;
+}
+
+.regular-text {
+	font-family: Pretendard-Regular;
+	color: black;
+	font-size: 15px;
+	line-height: 5px;
+	font-weight: 400;
+}
+
+/* Skills Section
+********************************************************************* */
+#skills {
+	padding: 100px 0 100px 0;
+	background-color: ##FCF8FF;
+}
+
+/* Portfolio Section
+********************************************************************* */
+#portfolio {
+	padding: 150px 0 200px 0;
+}
+
+/* 프로젝트 이미지 hover 하면 이미지 확대 효과 */
+.box .project-box {
+	position: relative; /* 상대적 위치 설정 */
+	width: 220px;
+	height: 120px;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.box .project-box img {
+	transition: transform 0.2s ease-in-out; /* 서서히 변하는(확대) 효과 */
+}
+
+.box .project-box:hover img {
+	transform: scale(1.1); /* 이미지 확대 효과 */
+}
+
+ @media ( max-width : 1100px) { 
+ 	.portfolio { */
+ 		flex-direction: column; 
+ 		align-items: stretch; 
+ 		gap: 0; 
+ 	} */
+ } */
+
+
+/* Contact Section
+********************************************************************* */
+#contact {
+	padding: 100px 0 100px 0;
+}
+
+input[type="email"], input[type="number"], input[type="search"], input[type="text"],
+	input[type="tel"], input[type="url"], input[type="password"], textarea,
+	select {
+	height: 38px;
+	padding: 6px 10px;
+	/* The 6px vertically centers text on FF, ignored by Webkit */
+	background-color: #FBF5FF;
+	border: none;
+	box-shadow: none;
+	box-sizing: border-box;
+	border-radius: 0;
+	outline: none;
+}
+
+textarea {
+	min-height: 250px;
+}
+
+input[type="submit"] {
+	display: inline-block;
+	height: 38px;
+	padding: 0 30px;
+	color: #fff;
+	text-align: center;
+	font-size: 11px;
+	font-weight: 600;
+	line-height: 38px;
+	letter-spacing: .1rem;
+	text-transform: uppercase;
+	text-decoration: none;
+	white-space: nowrap;
+	background: #D6CDF3;
+	border-radius: 0px;
+	border: 0;
+	cursor: pointer;
+	box-sizing: border-box;
+}
+
+input[type="submit"]:hover {
+	background: #F9DBAE;
+	text-decoration: none;
+}
+/* Footer Section
+********************************************************************* */
+footer {
+	min-height: 120px;
+	padding: 40px 0 40px 0;
+	background: #f6dca5;
+	background: -moz-linear-gradient(-45deg, #cab6fa 0%, #f9dbad 100%);
+	background: -webkit-linear-gradient(-45deg, #cab6fa 0%, #f9dbad 100%);
+	background: linear-gradient(135deg, #cab6fa 0%, #f9dbad 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cab6fa',
+		endColorstr='#f9dbad', GradientType=1);
+	box-sizing: border-box;
+}
+
+footer p {
+	color: #FFFFFF;
+	margin: 20px 0 0 0;
+}
+
+.socialIcons {
+	font-size: 34px;
+	color: rgba(255, 255, 255, 0.7);
+}
+
+
+
+
+.nine > p {
+line-height: 3px;
+}
+
+
+/* Lists
+********************************************************************* */
+ul {
+	list-style: circle inside;
+}
+
+ol {
+	list-style: decimal inside;
+}
+
+ol, ul {
+	padding-left: 0;
+	margin-top: 0;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+	margin: 1.5rem 0 1.5rem 3rem;
+	font-size: 90%;
+}
+
+li {
+	margin-bottom: 1rem;
+}
+/* Spacing
+********************************************************************* */
+button, .button {
+	margin-bottom: 1rem;
+}
+
+input, textarea, select, fieldset {
+	margin-bottom: 1.5rem;
+}
+
+pre, blockquote, dl, figure, table, p, ul, ol, form {
+	margin-bottom: 2.5rem;
+}
+/* Utilities
+********************************************************************* */
+.u-full-width {
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.u-max-full-width {
+	max-width: 100%;
+	box-sizing: border-box;
+}
+
+.u-pull-right {
+	float: right;
+}
+
+.u-pull-left {
+	float: left;
+}
+/* Clearing
+********************************************************************* */
+.container:after, .row:after, .u-cf {
+	content: "";
+	display: table;
+	clear: both;
+}
+/* Misc
+********************************************************************* */
+.icon {
+	padding-right: 10px;
+	color: #e55d87;
+}
+
+.block {
+	width: 70px;
+	height: 2px;
+	background: #e55d87; /* Old browsers */
+	background: -moz-linear-gradient(-45deg, #cab6fa 0%, #f9dbad 100%);
+	background: -webkit-linear-gradient(-45deg, #cab6fa 0%, #f9dbad 100%);
+	background: linear-gradient(135deg, #cab6fa 0%, #f9dbad 100%);
+	margin-bottom: 50px;
+}
 </style>
 
 </head>
@@ -1074,6 +1073,7 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 		</a>
 	</header>
 
+
 	<!-- About Section
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
@@ -1094,8 +1094,26 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 					</div>
 					<div class="info-column">
 						<div class="profile-info">
-							<p class="highlight-text">이름</p>
-							<p class="regular-text">장윤린</p>
+							<span class="highlight-text inline-block" style="font-size: 30px; font-weight: bold; color: black;">장윤린</span>
+							&nbsp;&nbsp;
+							<a href="https://github.com/yunlinIT" target="blank" class="inline-block" style="font-size: 15px;">
+								<img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub"
+									style="width: 30px; height: 30px;">
+							</a>
+							&nbsp;
+							<a href="https://velog.io/@yunlinit" target="blank" class="inline-block" style="font-size: 15px;">
+								<img src="https://images.velog.io/images/velog/profile/9aa07f66-5fcd-41f4-84f2-91d73afcec28/green%20favicon.png" alt="Velog"
+									style="width: 23px; height: 23px;">
+							</a>
+							&nbsp;
+							<a href="https://www.youtube.com/@yunlinit" target="blank" class="inline-block" style="font-size: 15px;">
+								<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTowJjFW22_21ogdZ9nauAIrOeNsODULE319wj_6iFeQA&s"
+									alt="YouTube" style="width: 30px; height: 20px;">
+							</a>
+							
+							</p>
+							<p class="regular-text">📞 010-4249-0977</p>
+							<p class="regular-text">✉️ yunlinit@gmail.com</p>
 							<p class="highlight-text">교육과정</p>
 							<p class="regular-text">코리아IT아카데미 Java 과정 | 2023.10.11 ~ 2023.11.07</p>
 							<p class="regular-text">코리아IT아카데미 DBMS 과정 | 2023.11.08 ~ 2023.12.05</p>
@@ -1141,59 +1159,72 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 			<div class="row">
 				<h1>My Projects</h1>
 				<div class="block"></div>
-				<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-					dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-					kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+				<p style="font-family: Pretendard">Click to visit each of the project's repository</p>
+				<p style="font-family: Pretendard">코드를 보시려면 프로젝트를 클릭해주세요</p>
+
 			</div>
 			<div class="row">
-				<div class="three columns">
-					<div class="project-box" >
-					<img src="https://velog.velcdn.com/images/yunlinit/post/b74e2e3c-d69b-44f6-bc29-d9855d2acc46/image.png" style ="width: 220px; height: 120px ; object-fit: auto;"/>
+				<a href = "https://github.com/yunlinIT/2024_01_Spring_Crema" target= "blank" class="three columns">
+					<div class="box">
+						<div class="project-box">
+							<img class="project-img"
+								src="https://velog.velcdn.com/images/yunlinit/post/b74e2e3c-d69b-44f6-bc29-d9855d2acc46/image.png"
+								style="width: 220px; height: 120px; object-fit: auto; border-radius: 10px;" />
+						</div>
 					</div>
 					<br>
 					<h4>Crema</h4>
-					<p>☕ 날씨 기반 대전 카페 추천 및 테마별 카페검색 플랫폼 </p>
+					<p style="font-family: Pretendard">☕ 날씨 기반 대전 카페 추천 및 테마별 카페검색 플랫폼</p>
 					<span class="typcn typcn-social-facebook-circular icon"></span>
 					<span class="typcn typcn-social-instagram-circular icon"></span>
 					<span class="typcn typcn-social-google-plus-circular icon"></span>
 					<span class="typcn typcn-social-linkedin-circular icon"></span>
-				</div>
-				<div class="three columns">
-					<div class="project-box" >
-					<img src="https://velog.velcdn.com/images/insamju300/post/829f1d9e-b53a-4d35-b945-9288fcf07ff9/image.png" style ="width: 220px; height: 120px ; object-fit: auto;"/>
+				</a>
+				<a href="https://github.com/fake150907/Trip_Angle_24_04" target="blank" class="three columns">
+					<div class="box">
+						<div class="project-box">
+							<img src="https://velog.velcdn.com/images/insamju300/post/829f1d9e-b53a-4d35-b945-9288fcf07ff9/image.png"
+								style="width: 220px; height: 120px; object-fit: auto; border-radius: 10px;" />
+						</div>
 					</div>
 					<br>
 					<h4>TripAngle</h4>
-					<p>🛫 GPT 기반의 여행, 패션, 날씨 통합 추천 서비스 </p>
+					<p style="font-family: Pretendard">🛫 GPT 기반의 여행, 패션, 날씨 통합 추천 서비스</p>
 					<span class="typcn typcn-social-facebook-circular icon"></span>
 					<span class="typcn typcn-social-instagram-circular icon"></span>
 					<span class="typcn typcn-social-google-plus-circular icon"></span>
 					<span class="typcn typcn-social-linkedin-circular icon"></span>
-				</div>
-				<div class="three columns">
-					<div class="project-box" >
-					<img src="https://velog.velcdn.com/images/insamju300/post/829f1d9e-b53a-4d35-b945-9288fcf07ff9/image.png" style ="width: 220px; height: 120px ; object-fit: auto;"/>
+				</a>
+				<a href="/" class="three columns">
+					<div class="box">
+						<div class="project-box">
+							<img src="https://velog.velcdn.com/images/insamju300/post/829f1d9e-b53a-4d35-b945-9288fcf07ff9/image.png"
+								style="width: 220px; height: 120px; object-fit: auto; border-radius: 10px;" />
+						</div>
 					</div>
 					<br>
-					<h4>My TODO List</h4>
-					<p>Designer</p>
+					<h4>TripAngle</h4>
+					<p style="font-family: Pretendard">Designer</p>
 					<span class="typcn typcn-social-facebook-circular icon"></span>
 					<span class="typcn typcn-social-instagram-circular icon"></span>
 					<span class="typcn typcn-social-google-plus-circular icon"></span>
 					<span class="typcn typcn-social-linkedin-circular icon"></span>
-				</div>
-				<div class="three columns">
-					<div class="project-box" >
-					<img src="https://velog.velcdn.com/images/yunlinit/post/7a6736e5-6eec-4a27-b6e3-ba1a0068979f/image.png" style ="width: 220px; height: 120px ; object-fit: auto;"/>
+				</a>
+				<a href="https://github.com/yunlinIT/2024_05_Spring_MyWebPage" target="blank" class="three columns">
+					<div class="box">
+						<div class="project-box">
+							<img src="https://velog.velcdn.com/images/yunlinit/post/7a6736e5-6eec-4a27-b6e3-ba1a0068979f/image.png"
+								style="width: 220px; height: 120px; object-fit: auto; border-radius: 10px;" />
+						</div>
 					</div>
 					<br>
 					<h4>My Portfolio</h4>
-					<p>Designer</p>
+					<p style="font-family: Pretendard">Designer</p>
 					<span class="typcn typcn-social-facebook-circular icon"></span>
 					<span class="typcn typcn-social-instagram-circular icon"></span>
 					<span class="typcn typcn-social-google-plus-circular icon"></span>
 					<span class="typcn typcn-social-linkedin-circular icon"></span>
-				</div>
+				</a>
 			</div>
 		</div>
 	</section>
@@ -1202,6 +1233,12 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 
 	<!-- Contact Section
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<style>
+.button-primary{
+background-color: black;
+}
+</style>
+
 
 	<section id="contact">
 		<div class="container">
@@ -1226,16 +1263,19 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 			</form>
 		</div>
 	</section>
-	
+
 
 
 	<!-- Footer Section
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
+
+
 	<footer>
 		<div class="container">
 			<div class="nine columns">
-				<p>Portfolio created by Chang Yun Lin*</p>
+				<p>'My Portfolio' created by Chang Yun Lin*</p>
+				<p>Copyright © CHANG YUN LIN. All Right Reserved.</p>
 			</div>
 			<div class="three columns">
 				<span class="typcn typcn-social-facebook-circular socialIcons"></span>
