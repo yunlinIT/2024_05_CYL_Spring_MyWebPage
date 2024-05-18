@@ -3,6 +3,10 @@
 <c:set var="pageTitle" value="장윤린의 Portfolio"></c:set>
 <%@ include file="../common/head.jspf"%>
 
+
+
+
+
 <script>
 	/*----------------------------------------------------*/
 	/* Navigation
@@ -10,7 +14,7 @@
 
 	$(window).scroll(function() {
 
-		if ($(window).scrollTop() > 300) {
+		if ($(window).scrollTop() == 0) {
 			$('.main_nav').addClass('sticky');
 		} else {
 			$('.main_nav').removeClass('sticky');
@@ -303,18 +307,16 @@ header {
 }
 
 .title {
-/* 	-webkit-align-self: center; */
-/* 	-ms-flex-item-align: center; */
+	/* 	-webkit-align-self: center; */
+	/* 	-ms-flex-item-align: center; */
 	align-self: center;
 	max-width: 100%;
 	text-align: center;
 }
 
-
-
 @media only screen and (max-height: 700px) {
 	.title h1 {
-		font-size: 80px;
+		font-size: 40px;
 	}
 }
 
@@ -324,41 +326,51 @@ header {
 	line-height: 150%;
 }
 
-@media only screen and (max-width: 500px) {
-	.title h1 {
-		font-size: 65px;
-	}
-}
 
 .title .icon {
 	color: #FFFFFF;
 	font-size: 50px;
 }
 
+/* .main_nav { */
+/* 	position: fixed; */
+/* 	top: 0px; */
+/* 	max-height: 50px; */
+/* 	z-index: 999; */
+/* 	width: 100%; */
+/* 	padding-top: 17px; */
+/* 	background: none; */
+/* 	overflow: hidden; */
+/* 	-webkit-transition: all 0.3s; */
+/* 	transition: all 0.3s; */
+/* 	opacity: 0; */
+/* 	top: -100px; */
+/* 	padding-bottom: 6px; */
+/* } */
 .main_nav {
 	position: fixed;
-	top: 0px;
-	max-height: 50px;
-	z-index: 999;
+	top: 0;
 	width: 100%;
-	padding-top: 17px;
-	background: none;
-	overflow: hidden;
-	-webkit-transition: all 0.3s;
-	transition: all 0.3s;
-	opacity: 0;
-	top: -100px;
-	padding-bottom: 6px;
+	z-index: 1000; /* 다른 요소보다 위에 표시되도록 설정 */
+	background-color: #FFFFFF; /* 필요에 따라 배경색 설정 */
+	padding-top: 23px;
 }
 
 @media only screen and (max-width: 766px) {
 	.main_nav {
 		padding-top: 25px;
+		display:none;
 	}
 }
 
+
+
+
+
+
 .open-nav {
-	max-height: 400px !important;
+/* 	max-height: 400px !important; */
+	display:hidden;
 }
 
 .sticky {
@@ -413,7 +425,7 @@ nav ul li {
 
 nav ul a {
 	text-transform: uppercase;
-	font-size: 12px;
+	font-size: 13px;
 	text-decoration: none;
 	color: #A58EFF;
 }
@@ -434,7 +446,8 @@ nav ul a:hover {
 
 @media only screen and (max-width: 766px) {
 	.mobile-toggle {
-		display: block;
+/* 		display: block; */
+		display: hidden;
 	}
 }
 
@@ -469,306 +482,104 @@ nav ul a:hover {
 	animation: fade_move_down 2s ease-in-out infinite;
 }
 
-/*animated scroll arrow animation*/
-@
--webkit-keyframes fade_move_down { 0% {
-	-webkit-transform: translate(0, -10px) rotate(45deg);
-	opacity: 0;
+
+/* animated scroll arrow animation */
+/* @-webkit-keyframes fade_move_down { */
+/*     0% { */
+/*         -webkit-transform: translate(0, -10px) rotate(45deg); */
+/*         opacity: 0; */
+/*     } */
+/*     50% { */
+/*         opacity: 1; */
+/*     } */
+/*     100% { */
+/*         -webkit-transform: translate(0, 10px) rotate(45deg); */
+/*         opacity: 0; */
+/*     } */
+/* } */
+
+/* @-moz-keyframes fade_move_down { */
+/*     0% { */
+/*         -moz-transform: translate(0, -10px) rotate(45deg); */
+/*         opacity: 0; */
+/*     } */
+/*     50% { */
+/*         opacity: 1; */
+/*     } */
+/*     100% { */
+/*         -moz-transform: translate(0, 10px) rotate(45deg); */
+/*         opacity: 0; */
+/*     } */
+/* } */
+
+/* @keyframes fade_move_down { */
+/*     0% { */
+/*         transform: translate(0, -10px) rotate(45deg); */
+/*         opacity: 0; */
+/*     } */
+/*     50% { */
+/*         opacity: 1; */
+/*     } */
+/*     100% { */
+/*         transform: translate(0, 10px) rotate(45deg); */
+/*         opacity: 0; */
+/*     } */
+/* } */
+
+
+/* animated scroll arrow animation */
+@-webkit-keyframes fade_move_down {
+    0% {
+        -webkit-transform: translate(0, -10px) rotate(45deg);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: translate(0, 10px) rotate(45deg);
+        opacity: 0;
+    }
 }
 
-50
-
-
-
-
-%
-{
-opacity
-
-
-
-
-:
-
-
-
-
-1
-
-
-;
-}
-100
-
-
-
-
-%
-{
--webkit-transform
-
-
-
-
-:
-
-
-
-
-translate
-
-
-(
-
-
-
-
-0
-,
-10px
-
-
-
-
-)
-
-
-
-
-rotate
-
-
-(
-
-
-
-
-45deg
-
-
-
-
-)
-
-
-;
-opacity
-
-
-
-
-:
-
-
-
-
-0
-
-
-;
-}
-}
-@
--moz-keyframes fade_move_down { 0% {
-	-moz-transform: translate(0, -10px) rotate(45deg);
-	opacity: 0;
+@-moz-keyframes fade_move_down {
+    0% {
+        -moz-transform: translate(0, -10px) rotate(45deg);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        -moz-transform: translate(0, 10px) rotate(45deg);
+        opacity: 0;
+    }
 }
 
-50
-
-
-
-
-%
-{
-opacity
-
-
-
-
-:
-
-
-
-
-1
-
-
-;
-}
-100
-
-
-
-
-%
-{
--moz-transform
-
-
-
-
-:
-
-
-
-
-translate
-
-
-(
-
-
-
-
-0
-,
-10px
-
-
-
-
-)
-
-
-
-
-rotate
-
-
-(
-
-
-
-
-45deg
-
-
-
-
-)
-
-
-;
-opacity
-
-
-
-
-:
-
-
-
-
-0
-
-
-;
-}
-}
-@
-keyframes fade_move_down { 0% {
-	transform: translate(0, -10px) rotate(45deg);
-	opacity: 0;
+@keyframes fade_move_down {
+    0% {
+        transform: translate(0, -10px) rotate(45deg);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(0, 10px) rotate(45deg);
+        opacity: 0;
+    }
 }
 
-50
 
 
 
 
-%
-{
-opacity
-
-
-
-
-:
-
-
-
-
-1
-
-
-;
-}
-100
-
-
-
-
-%
-{
-transform
-
-
-
-
-:
-
-
-
-
-translate
-
-
-(
-
-
-
-
-0
-,
-10px
-
-
-
-
-)
-
-
-
-
-rotate
-
-
-(
-
-
-
-
-45deg
-
-
-
-
-)
-
-
-;
-opacity
-
-
-
-
-:
-
-
-
-
-0
-
-
-;
-}
-}
 /* About Section
 ********************************************************************* */
 #about {
 	padding: 100px 0 100px 0;
 }
+
 /* Team Section
 ********************************************************************* */
 #team {
@@ -785,77 +596,6 @@ opacity
 	background-color: ##FCF8FF;
 }
 
-.progressBar {
-	margin-bottom: 26px;
-	margin-bottom: 1.66em;
-}
-
-.progressBar h4 {
-	font-size: 16px;
-	text-transform: none;
-	margin-bottom: 7px;
-	margin-bottom: .33em;
-}
-
-.progressBarContainer {
-	width: 100%;
-	height: 8px;
-	background: #E1E1E1;
-	overflow: hidden;
-}
-
-.progressBarValue {
-	height: 8px;
-	float: left;
-	background: #e55d87; /* Old browsers */
-	background: -moz-linear-gradient(-45deg, #e55d87 0%, #5fc3e4 100%);
-	background: -webkit-linear-gradient(-45deg, #e55d87 0%, #5fc3e4 100%);
-	background: linear-gradient(135deg, #e55d87 0%, #5fc3e4 100%);
-}
-
-.value-00 {
-	width: 0;
-}
-
-.value-10 {
-	width: 10%;
-}
-
-.value-20 {
-	width: 20%;
-}
-
-.value-30 {
-	width: 30%;
-}
-
-.value-40 {
-	width: 40%;
-}
-
-.value-50 {
-	width: 50%;
-}
-
-.value-60 {
-	width: 60%;
-}
-
-.value-70 {
-	width: 70%;
-}
-
-.value-80 {
-	width: 80%;
-}
-
-.value-90 {
-	width: 90%;
-}
-
-.value-100 {
-	width: 100%;
-}
 /* Portfolio Section
 ********************************************************************* */
 #portfolio {
@@ -879,27 +619,8 @@ opacity
 	background-position: center;
 }
 
-/* Testimonial Section
-********************************************************************* */
-#testimonial {
-	background-color: #F5F5F5;
-	padding: 100px 0 100px 0;
-}
 
-.quoteLoop {
-	height: auto;
-	width: 100%;
-	margin: 0 auto;
-	position: relative;
-}
 
-.quote {
-	margin: 10px 30px;
-	height: inherit;
-	top: 0px;
-	display: none;
-	text-align: center;
-}
 /* Contact Section
 ********************************************************************* */
 #contact {
@@ -953,12 +674,12 @@ input[type="submit"]:hover {
 footer {
 	min-height: 120px;
 	padding: 40px 0 40px 0;
-	background: #e55d87;
-	background: -moz-linear-gradient(-45deg, #e55d87 0%, #5fc3e4 100%);
-	background: -webkit-linear-gradient(-45deg, #e55d87 0%, #5fc3e4 100%);
-	background: linear-gradient(135deg, #e55d87 0%, #5fc3e4 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e55d87',
-		endColorstr='#5fc3e4', GradientType=1);
+	background: #f6dca5;
+	background: -moz-linear-gradient(-45deg, #cab6fa 0%, #f9dbad 100%);
+	background: -webkit-linear-gradient(-45deg, #cab6fa 0%, #f9dbad 100%);
+	background: linear-gradient(135deg, #cab6fa 0%, #f9dbad 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cab6fa',
+		endColorstr='#f9dbad', GradientType=1);
 	box-sizing: border-box;
 }
 
@@ -1044,20 +765,21 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 	width: 70px;
 	height: 2px;
 	background: #e55d87; /* Old browsers */
-	background: -moz-linear-gradient(-45deg, #e55d87 0%, #5fc3e4 100%);
-	background: -webkit-linear-gradient(-45deg, #e55d87 0%, #5fc3e4 100%);
-	background: linear-gradient(135deg, #e55d87 0%, #5fc3e4 100%);
+	background: -moz-linear-gradient(-45deg, #cab6fa 0%, #f9dbad 100%);
+	background: -webkit-linear-gradient(-45deg, #cab6fa 0%, #f9dbad 100%);
+	background: linear-gradient(135deg, #cab6fa 0%, #f9dbad 100%);
 	margin-bottom: 50px;
 }
 
 /* about 부분 */
 .profile-container {
-	padding: 0 20px;
+	
 }
 
 .profile-content {
 	display: flex;
 	gap: 20px;
+	margin-left: -20px;
 }
 
 @media ( max-width : 991px) {
@@ -1068,17 +790,6 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 	}
 }
 
-.image-column {
-	display: flex;
-	flex-direction: column;
-	width: 40%;
-}
-
-@media ( max-width : 991px) {
-	.image-column {
-		width: 100%;
-	}
-}
 
 .profile-image {
 	width: 100%;
@@ -1093,7 +804,9 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 @media ( max-width : 991px) {
 	.profile-image {
 		max-width: 100%;
-		margin-top: 40px;
+		width: 200px;
+		margin-top: -80px;
+		margin-left: 30px;
 	}
 }
 
@@ -1112,8 +825,10 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 
 .profile-info {
 	color: #5e3bee;
-	padding-top: 39px;
+	/* 	padding-top: 39px; */
 	font: 500 22px/25px Inter, sans-serif;
+	width: 480px;
+	margin-top: 20px;
 }
 
 @media ( max-width : 991px) {
@@ -1144,12 +859,19 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-/* 	padding: 80px 60px; */
+	height: 600px;
+	width: 100vw; /* 화면의 가로 길이를 100%로 설정 */
+	padding: 50px 0px; /* 필요에 따라 주석을 해제 */
+}
+
+.container3 {
+	background-color: #fcf8ff;
+	height:
 }
 
 @media ( max-width : 991px) {
 	.container2 {
-		padding: 0 20px;
+/* 		padding: 0 20px; */
 	}
 }
 
@@ -1168,6 +890,7 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 .flex-container {
 	gap: 20px;
 	display: flex;
+	max-width: 100%;
 }
 
 @media ( max-width : 991px) {
@@ -1199,12 +922,12 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 
 @media ( max-width : 991px) {
 	.greeting-section {
-		margin-top: 40px;
+		
 	}
 }
 
 .greeting-text {
-	font: 700 64px/120% Roboto, sans-serif;
+	font: 700 40px Pretendard;
 }
 
 .highlight {
@@ -1213,43 +936,62 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 
 @media ( max-width : 991px) {
 	.greeting-text {
-		font-size: 40px;
+		font-size: 30px;
 	}
 }
 
 .description {
-	color: var(--Body, #1c1e53);
+	width: 800px; !
+	important color: var(--Body, #1c1e53);
 	margin-top: 62px;
-	font: 500 24px/36px Roboto, sans-serif;
+	font: 500 20px Pretendard, sans-serif;
+	width: 800px !important;
 }
 
 @media ( max-width : 991px) {
 	.description {
-		margin-top: 40px;
+		width: 100px;
 	}
 }
 
 .image-column {
 	display: flex;
 	flex-direction: column;
-	width: 29%;
+	width: 42%;
 	margin-left: 20px;
 }
 
 @media ( max-width : 991px) {
 	.image-column {
 		width: 100%;
-		margin-top: 40px;
+		margin-top: 100px;
 	}
 }
 
-.profile-image {
-	aspect-ratio: 0.85;
-	object-fit: auto;
-	object-position: center;
-	width: 100%;
-	flex-grow: 1;
+@media ( max-width : 991px) {
+	.image-column {
+		width: 100%;
+	}
 }
+
+.profile-image1 {
+    object-fit: auto;
+    object-position: center;
+    height: 400px;
+    width: 330px;
+}
+
+@media (max-width: 991px) {
+    .profile-image1 {
+       display:none
+    }
+    
+    /* 부모 요소에 text-align: center; 추가 */
+    .container2 {
+        text-align: center;
+    }
+}
+
 </style>
 
 </head>
@@ -1263,15 +1005,30 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 		<div class="main_nav">
 			<div class="container">
 				<div class="mobile-toggle">
-					<span></span> <span></span> <span></span>
+					<span></span>
+					<span></span>
+					<span></span>
 				</div>
 				<nav>
 					<ul>
-						<li><a class="smoothscroll" href="#header">Home*</a></li>
-						<li><a class="smoothscroll" href="#about">About*</a></li>
-						<li><a class="smoothscroll" href="#skills">Skills*</a></li>
-						<li><a class="smoothscroll" href="#portfolio">Projects*</a></li>
-						<li><a class="smoothscroll" href="#contact">Contact*</a></li>
+						<li>
+							<a href="main">Home*</a>
+						</li>
+						<li>
+							<a class="smoothscroll" href="#header">Intro*</a>
+						</li>
+						<li>
+							<a class="smoothscroll" href="#about">About*</a>
+						</li>
+						<li>
+							<a class="smoothscroll" href="#skills">Skills*</a>
+						</li>
+						<li>
+							<a class="smoothscroll" href="#portfolio">Projects*</a>
+						</li>
+						<li>
+							<a class="smoothscroll" href="#contact">Contact*</a>
+						</li>
 					</ul>
 				</nav>
 			</div>
@@ -1283,18 +1040,25 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 						<div class="text-column">
 							<div class="greeting-section">
 								<h1 class="greeting-text">
-									👋🏼 안녕하세요 <span class="highlight">, 웹개발</span> 자 장윤린입니다.
+									👋🏼 안녕하세요,
+									<span class="highlight"> 웹개발자</span>
+									장윤린입니다.
 								</h1>
 								<p class="description">
-									이 포트폴리오는 제가 걸어온 여정과 끊임없는 발전을 담아냈습니다. <br /> 새로운 기술을 배우고 실험하는 것을 즐기며, 개인 프로젝트 뿐만<br /> 아니라 팀 프로젝트 경험을 통해 협업
-									능력을 키워왔습니다. 앞으로<br /> 개발자로서 성장하며 사용자 중심의 서비스를 만들어나가고 싶습니다.
+									이 포트폴리오는 제가 걸어온 여정과 끊임없는 발전을 담아냈습니다.
+									<br />
+									새로운 기술을 배우고 실험하는 것을 즐기며, 개인 프로젝트 뿐만
+									<br />
+									아니라 팀 프로젝트 경험을 통해 협업 능력을 키워왔습니다. 앞으로
+									<br />
+									개발자로서 성장하며 사용자 중심의 서비스를 만들어나가고 싶습니다.
 								</p>
 							</div>
 						</div>
 						<div class="image-column">
 							<img loading="lazy"
 								src="https://cdn.builder.io/api/v1/image/assets/TEMP/1c57780b862aa0d1e8f27c380c414913470446adf16e859de1e6f759fcd141c1?apiKey=725f06f0daeb4ab382150ea4b4cf3550&"
-								alt="Profile Image" class="profile-image" />
+								alt="Profile Image" class="profile-image1" />
 						</div>
 					</div>
 				</div>
@@ -1312,6 +1076,7 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 
 	<!-- About Section
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
 
 	<section id="about">
 		<div class="container">
@@ -1339,7 +1104,7 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 							<p class="highlight-text">학력</p>
 							<p class="regular-text">University of Wisconsin-Madison (위스콘신주립대학교)</p>
 							<p class="regular-text">&nbsp;&nbsp;&nbsp;&nbsp;| 2008.08 ~ 2009.12</p>
-							<p class="regular-text">대전국제학교(고등학교) | 2006.08 ~ 2008.06</p>
+							<p class="regular-text">대전국제학교(고등학교) | 2005.08 ~ 2008.06</p>
 							<p class="highlight-text">기타 활동 사항</p>
 							<p class="regular-text">동아어학원 - 유·초등부 담임강사, 교수부장 | 2017.03 ~ 2023.08</p>
 							<p class="regular-text">IBT어학원 - 초·중 영어강사 | 2011.08 ~ 2013.11</p>
@@ -1382,40 +1147,52 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 			</div>
 			<div class="row">
 				<div class="three columns">
-					<img src="http://placehold.it/220x220" width="220" height="220" alt="" />
-					<h4>Naruto Uzumaki</h4>
-					<p>Creative Director</p>
-					<span class="typcn typcn-social-facebook-circular icon"></span><span
-						class="typcn typcn-social-instagram-circular icon"></span><span
-						class="typcn typcn-social-google-plus-circular icon"></span><span
-						class="typcn typcn-social-linkedin-circular icon"></span>
+					<div class="project-box" >
+					<img src="https://velog.velcdn.com/images/yunlinit/post/b74e2e3c-d69b-44f6-bc29-d9855d2acc46/image.png" style ="width: 220px; height: 120px ; object-fit: auto;"/>
+					</div>
+					<br>
+					<h4>Crema</h4>
+					<p>☕ 날씨 기반 대전 카페 추천 및 테마별 카페검색 플랫폼 </p>
+					<span class="typcn typcn-social-facebook-circular icon"></span>
+					<span class="typcn typcn-social-instagram-circular icon"></span>
+					<span class="typcn typcn-social-google-plus-circular icon"></span>
+					<span class="typcn typcn-social-linkedin-circular icon"></span>
 				</div>
 				<div class="three columns">
-					<img src="http://placehold.it/220x220" width="220" height="220" alt="" />
-					<h4>Sasuke Uchiha</h4>
-					<p>Lead Designer</p>
-					<span class="typcn typcn-social-facebook-circular icon"></span><span
-						class="typcn typcn-social-instagram-circular icon"></span><span
-						class="typcn typcn-social-google-plus-circular icon"></span><span
-						class="typcn typcn-social-linkedin-circular icon"></span>
+					<div class="project-box" >
+					<img src="https://velog.velcdn.com/images/insamju300/post/829f1d9e-b53a-4d35-b945-9288fcf07ff9/image.png" style ="width: 220px; height: 120px ; object-fit: auto;"/>
+					</div>
+					<br>
+					<h4>TripAngle</h4>
+					<p>🛫 GPT 기반의 여행, 패션, 날씨 통합 추천 서비스 </p>
+					<span class="typcn typcn-social-facebook-circular icon"></span>
+					<span class="typcn typcn-social-instagram-circular icon"></span>
+					<span class="typcn typcn-social-google-plus-circular icon"></span>
+					<span class="typcn typcn-social-linkedin-circular icon"></span>
 				</div>
 				<div class="three columns">
-					<img src="http://placehold.it/220x220" width="220" height="220" alt="" />
-					<h4>Shikamaru Nara</h4>
+					<div class="project-box" >
+					<img src="https://velog.velcdn.com/images/insamju300/post/829f1d9e-b53a-4d35-b945-9288fcf07ff9/image.png" style ="width: 220px; height: 120px ; object-fit: auto;"/>
+					</div>
+					<br>
+					<h4>My TODO List</h4>
 					<p>Designer</p>
-					<span class="typcn typcn-social-facebook-circular icon"></span><span
-						class="typcn typcn-social-instagram-circular icon"></span><span
-						class="typcn typcn-social-google-plus-circular icon"></span><span
-						class="typcn typcn-social-linkedin-circular icon"></span>
+					<span class="typcn typcn-social-facebook-circular icon"></span>
+					<span class="typcn typcn-social-instagram-circular icon"></span>
+					<span class="typcn typcn-social-google-plus-circular icon"></span>
+					<span class="typcn typcn-social-linkedin-circular icon"></span>
 				</div>
 				<div class="three columns">
-					<img src="http://placehold.it/220x220" width="220" height="220" alt="" />
-					<h4>Sakura Haruno</h4>
+					<div class="project-box" >
+					<img src="https://velog.velcdn.com/images/yunlinit/post/7a6736e5-6eec-4a27-b6e3-ba1a0068979f/image.png" style ="width: 220px; height: 120px ; object-fit: auto;"/>
+					</div>
+					<br>
+					<h4>My Portfolio</h4>
 					<p>Designer</p>
-					<span class="typcn typcn-social-facebook-circular icon"></span><span
-						class="typcn typcn-social-instagram-circular icon"></span><span
-						class="typcn typcn-social-google-plus-circular icon"></span><span
-						class="typcn typcn-social-linkedin-circular icon"></span>
+					<span class="typcn typcn-social-facebook-circular icon"></span>
+					<span class="typcn typcn-social-instagram-circular icon"></span>
+					<span class="typcn typcn-social-google-plus-circular icon"></span>
+					<span class="typcn typcn-social-linkedin-circular icon"></span>
 				</div>
 			</div>
 		</div>
@@ -1433,10 +1210,12 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 			<form>
 				<div class="row">
 					<div class="six columns">
-						<label for="exampleRecipientInput">Name</label> <input class="u-full-width" type="text">
+						<label for="exampleRecipientInput">Name</label>
+						<input class="u-full-width" type="text">
 					</div>
 					<div class="six columns">
-						<label for="exampleEmailInput">Email</label> <input class="u-full-width" type="email">
+						<label for="exampleEmailInput">Email</label>
+						<input class="u-full-width" type="email">
 					</div>
 				</div>
 				<div class="row">
@@ -1447,6 +1226,8 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 			</form>
 		</div>
 	</section>
+	
+
 
 	<!-- Footer Section
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -1454,13 +1235,13 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 	<footer>
 		<div class="container">
 			<div class="nine columns">
-				<p>Created with love by Jeff.</p>
+				<p>Portfolio created by Chang Yun Lin*</p>
 			</div>
 			<div class="three columns">
-				<span class="typcn typcn-social-facebook-circular socialIcons"></span> <span
-					class="typcn typcn-social-instagram-circular socialIcons"></span> <span
-					class="typcn typcn-social-google-plus-circular socialIcons"></span> <span
-					class="typcn typcn-social-linkedin-circular socialIcons"></span>
+				<span class="typcn typcn-social-facebook-circular socialIcons"></span>
+				<span class="typcn typcn-social-instagram-circular socialIcons"></span>
+				<span class="typcn typcn-social-google-plus-circular socialIcons"></span>
+				<span class="typcn typcn-social-linkedin-circular socialIcons"></span>
 			</div>
 		</div>
 	</footer>
