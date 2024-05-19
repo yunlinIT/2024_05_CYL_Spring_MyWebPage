@@ -1198,7 +1198,7 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 					<span class="icon"></span>
 
 				</a>
-				<a href="https://github.com/yunlinIT/todoapp_2024_04" class="three columns">
+				<a href="https://github.com/yunlinIT/todoapp_2024_04" target="blank" class="three columns">
 					<div class="box">
 						<div class="project-box">
 							<img src="https://velog.velcdn.com/images/yunlinit/post/9985f232-fc1c-4ba5-952b-8b5a5f613a18/image.png"
@@ -1211,7 +1211,7 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 					<span class="icon"></span>
 
 				</a>
-				<a href="https://velog.velcdn.com/images/yunlinit/post/9985f232-fc1c-4ba5-952b-8b5a5f613a18/image.png" target="blank" class="three columns">
+				<a href="https://github.com/yunlinIT/2024_05_Spring_MyWebPage" target="blank" class="three columns">
 					<div class="box">
 						<div class="project-box">
 							<img src="https://velog.velcdn.com/images/yunlinit/post/7a6736e5-6eec-4a27-b6e3-ba1a0068979f/image.png"
