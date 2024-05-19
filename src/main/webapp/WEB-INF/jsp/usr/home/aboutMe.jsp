@@ -1168,9 +1168,7 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 			<div class="row">
 				<h1>My Projects</h1>
 				<div class="block"></div>
-				<p style="font-family: Pretendard">Click to visit each of the project's repository</p>
-				<p style="font-family: Pretendard">코드를 보시려면 프로젝트를 클릭해주세요</p>
-
+				<p style="font-family: Urbanist">Click to visit the repository of each project.</p>
 			</div>
 			<div class="row">
 				<a href = "https://github.com/yunlinIT/2024_01_Spring_Crema" target= "blank" class="three columns">
@@ -1184,7 +1182,7 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 					<br>
 					<h4>Crema</h4>
 					<p style="font-family: Pretendard">☕ 날씨 기반 대전 카페 추천 및 테마별 카페검색 플랫폼</p>
-					<span class="icon">GitHub</span>
+					<span class="icon"></span>
 
 				</a>
 				<a href="https://github.com/fake150907/Trip_Angle_24_04" target="blank" class="three columns">
@@ -1197,23 +1195,23 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 					<br>
 					<h4>TripAngle</h4>
 					<p style="font-family: Pretendard">🛫 GPT 기반의 여행, 패션, 날씨 통합 추천 서비스</p>
-					<span class="icon">GitHub</span>
+					<span class="icon"></span>
 
 				</a>
-				<a href="/" class="three columns">
+				<a href="https://github.com/yunlinIT/todoapp_2024_04" class="three columns">
 					<div class="box">
 						<div class="project-box">
-							<img src="https://velog.velcdn.com/images/insamju300/post/829f1d9e-b53a-4d35-b945-9288fcf07ff9/image.png"
+							<img src="https://velog.velcdn.com/images/yunlinit/post/9985f232-fc1c-4ba5-952b-8b5a5f613a18/image.png"
 								style="width: 220px; height: 120px; object-fit: auto; border-radius: 10px;" />
 						</div>
 					</div>
 					<br>
-					<h4>TripAngle</h4>
-					<p style="font-family: Pretendard">Designer</p>
-					<span class="icon">GitHub</span>
+					<h4>My TODO List !</h4>
+					<p style="font-family: Pretendard">📝 직관적으로 사용가능 한 할일 목록 앱 </p>
+					<span class="icon"></span>
 
 				</a>
-				<a href="https://github.com/yunlinIT/2024_05_Spring_MyWebPage" target="blank" class="three columns">
+				<a href="https://velog.velcdn.com/images/yunlinit/post/9985f232-fc1c-4ba5-952b-8b5a5f613a18/image.png" target="blank" class="three columns">
 					<div class="box">
 						<div class="project-box">
 							<img src="https://velog.velcdn.com/images/yunlinit/post/7a6736e5-6eec-4a27-b6e3-ba1a0068979f/image.png"
@@ -1222,8 +1220,8 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 					</div>
 					<br>
 					<h4>My Portfolio</h4>
-					<p style="font-family: Pretendard">Designer</p>
-					<span class="icon">GitHub</span>
+					<p style="font-family: Pretendard">👩🏻‍💻 장윤린의 웹 포트폴리오</p>
+					<span class="icon"></span>
 
 				</a>
 			</div>
