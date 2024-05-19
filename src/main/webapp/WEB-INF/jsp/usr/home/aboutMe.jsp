@@ -1184,10 +1184,8 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 					<br>
 					<h4>Crema</h4>
 					<p style="font-family: Pretendard">☕ 날씨 기반 대전 카페 추천 및 테마별 카페검색 플랫폼</p>
-					<span class="typcn typcn-social-facebook-circular icon"></span>
-					<span class="typcn typcn-social-instagram-circular icon"></span>
-					<span class="typcn typcn-social-google-plus-circular icon"></span>
-					<span class="typcn typcn-social-linkedin-circular icon"></span>
+					<span class="icon">GitHub</span>
+
 				</a>
 				<a href="https://github.com/fake150907/Trip_Angle_24_04" target="blank" class="three columns">
 					<div class="box">
@@ -1199,10 +1197,8 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 					<br>
 					<h4>TripAngle</h4>
 					<p style="font-family: Pretendard">🛫 GPT 기반의 여행, 패션, 날씨 통합 추천 서비스</p>
-					<span class="typcn typcn-social-facebook-circular icon"></span>
-					<span class="typcn typcn-social-instagram-circular icon"></span>
-					<span class="typcn typcn-social-google-plus-circular icon"></span>
-					<span class="typcn typcn-social-linkedin-circular icon"></span>
+					<span class="icon">GitHub</span>
+
 				</a>
 				<a href="/" class="three columns">
 					<div class="box">
@@ -1214,10 +1210,8 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 					<br>
 					<h4>TripAngle</h4>
 					<p style="font-family: Pretendard">Designer</p>
-					<span class="typcn typcn-social-facebook-circular icon"></span>
-					<span class="typcn typcn-social-instagram-circular icon"></span>
-					<span class="typcn typcn-social-google-plus-circular icon"></span>
-					<span class="typcn typcn-social-linkedin-circular icon"></span>
+					<span class="icon">GitHub</span>
+
 				</a>
 				<a href="https://github.com/yunlinIT/2024_05_Spring_MyWebPage" target="blank" class="three columns">
 					<div class="box">
@@ -1229,10 +1223,8 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 					<br>
 					<h4>My Portfolio</h4>
 					<p style="font-family: Pretendard">Designer</p>
-					<span class="typcn typcn-social-facebook-circular icon"></span>
-					<span class="typcn typcn-social-instagram-circular icon"></span>
-					<span class="typcn typcn-social-google-plus-circular icon"></span>
-					<span class="typcn typcn-social-linkedin-circular icon"></span>
+					<span class="icon">GitHub</span>
+
 				</a>
 			</div>
 		</div>
@@ -1278,64 +1270,6 @@ background-color: black;
 		</div>
 	</section>
 	
-	
-	
-	
-	
-<!-- 	<section class="mt-8 text-xl px-4"> -->
-<!--     <h1 style="text-align: center; font-size: 25; margin-top: 100px; font-weight: 600;">제휴 문의하기</h1> -->
-<!--     <div class="mx-auto"> -->
-<!--         <form class="gform" method="POST" data-email="yunlinit@gmail.com" -->
-<!--             action="https://script.google.com/macros/s/AKfycbxkZTwkACh8C2St2dGm8mxtr3Yuj91yE1f92s-gEhghKd0kle5RHSEXSTuwGjPdZwlmxA/exec"> -->
-           
-<!-- <!--             <form class="gform" method="POST" data-email="yunlinit@gmail.com" action="https://script.google.com/macros/s/AKfycbxkZTwkACh8C2St2dGm8mxtr3Yuj91yE1f92s-gEhghKd0kle5RHSEXSTuwGjPdZwlmxA/exec" onsubmit="submitWriteEmailFormDone(this); return false;"> --> -->
-<!-- <!-- 이메일 전송 기능 구현 시 여기 수정해야함 --> -->
-
-<!--             <table class="write-box table-box-1 mx-auto mt-10" border="1"> -->
-<!--                 <tbody> -->
-<!--                     <tr> -->
-<!--                         <th style="font-weight: 600">이름</th> -->
-<!--                         <td><input class="title input input-bordered input-md w-full max-w-xs" autocomplete="off" type="text" -->
-<!--                             placeholder="이름을 입력해주세요" name="name" /> -->
-<!--                             <div style="display: inline-block; font-weight: 600; margin-left: 4em;">연락처</div> <input -->
-<!--                             class="title input input-bordered input-md w-full max-w-xs" autocomplete="off" type="text" -->
-<!--                             placeholder="전화번호를 입력해주세요" name="contact" style="margin-left: 1.8em" /></td> -->
-
-<!--                     </tr> -->
-
-<!--                     <tr> -->
-<!--                         <th style="font-weight: 600">이메일</th> -->
-<!--                         <td><input class="title input input-bordered input-md w-full " autocomplete="off" type="text" -->
-<!--                             placeholder="id@email.com" name="email" style="width: 780px" /></td> -->
-<!--                     </tr> -->
-<!--                     <tr> -->
-<!--                         <th style="font-weight: 600">내용</th> -->
-<!--                         <td><textarea placeholder="내용을 입력해주세요" name="body" class="textarea textarea-bordered textarea-lg" -->
-<!--                                 style="width: 780px; height: 300px;"></textarea> </script> -->
-<!--                             </div></td> -->
-<!--                     </tr> -->
-<!--                     <tr> -->
-<!--                         <th></th> -->
-<!--                         </br> -->
-<!--                         <td style="text-align: left;"> -->
-<!--                             <button class="writeBtn btn btn-sm" id="submitBtn" type="submit" value="등록" style="margin-left: 320px; margin-top: 10px;">문의하기</button> <span -->
-<!--                             style="float: right;"> -->
-<!--                                 <button class="backBtn btn btn-sm btn-ghost" id ="backBtn" class="" type="button" onclick="history.back();">뒤로가기</button> -->
-<!--                         </span> -->
-<!--                         </td> -->
-
-<!--                     </tr> -->
-<!--                 </tbody> -->
-
-
-<!--             </table> -->
-<!--         </form> -->
-
-
-<!--     </div> -->
-
-<!-- </section> -->
-
 
 
 	<!-- Footer Section
@@ -1346,14 +1280,13 @@ background-color: black;
 	<footer>
 		<div class="container">
 			<div class="nine columns">
-				<p>'My Portfolio' created by Chang Yun Lin*</p>
+				<p>Portfolio* created by Chang Yun Lin</p>
 				<p>Copyright © CHANG YUN LIN. All Right Reserved.</p>
 			</div>
 			<div class="three columns">
-				<span class="typcn typcn-social-facebook-circular socialIcons"></span>
-				<span class="typcn typcn-social-instagram-circular socialIcons"></span>
-				<span class="typcn typcn-social-google-plus-circular socialIcons"></span>
-				<span class="typcn typcn-social-linkedin-circular socialIcons"></span>
+				<a href ="https://github.com/yunlinIT" target="blank" class="icon">GitHub</a> &nbsp;&nbsp;
+				<a href ="https://velog.io/@yunlinit" target="blank" class="icon">Velog</a> &nbsp;&nbsp;
+				<a href ="https://www.youtube.com/@yunlinit" target="blank" class="icon">YouTube</a> &nbsp;&nbsp;
 			</div>
 		</div>
 	</footer>
