@@ -805,7 +805,7 @@ nav ul a:hover {
 /* Portfolio Section
 ********************************************************************* */
 #portfolio {
-	padding: 150px 0 200px 0;
+	padding: 150px 0 300px 0;
 }
 
 /* 프로젝트 이미지 hover 하면 이미지 확대 효과 */
