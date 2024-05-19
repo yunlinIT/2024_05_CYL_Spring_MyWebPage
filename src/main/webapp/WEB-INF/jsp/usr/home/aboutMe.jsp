@@ -4,7 +4,8 @@
 <%@ include file="../common/head.jspf"%>
 
 
-
+<script data-cfasync="false" type="text/javascript"
+		src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
 
 
 <script>
@@ -991,6 +992,13 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 	background: linear-gradient(135deg, #cab6fa 0%, #f9dbad 100%);
 	margin-bottom: 50px;
 }
+
+/* Cursor
+********************************************************************* */
+/* * {cursor: url(https://ani.cursors-4u.net/symbols/sym-8/sym758.ani), url(https://ani.cursors-4u.net/symbols/sym-8/sym758.png), auto !important;} */
+/* * {cursor: url(https://cur.cursors-4u.net/cursors/cur-9/cur271.cur), auto;} */
+* {cursor: url(https://cur.cursors-4u.net/cursors/cur-9/cur267.cur), auto;}
+
 </style>
 
 </head>
@@ -1114,6 +1122,7 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 							</p>
 							<p class="regular-text">📞 010-4249-0977</p>
 							<p class="regular-text">✉️ yunlinit@gmail.com</p>
+							<p class="regular-text">🗯️ 특기 : 영어 </p>
 							<p class="highlight-text">교육과정</p>
 							<p class="regular-text">코리아IT아카데미 Java 과정 | 2023.10.11 ~ 2023.11.07</p>
 							<p class="regular-text">코리아IT아카데미 DBMS 과정 | 2023.11.08 ~ 2023.12.05</p>
@@ -1244,25 +1253,88 @@ background-color: black;
 		<div class="container">
 			<h1>Contact</h1>
 			<div class="block"></div>
-			<form>
+			 <form class="gform" method="POST" data-email="yunlinit@gmail.com"
+            action="https://script.google.com/macros/s/AKfycbxkZTwkACh8C2St2dGm8mxtr3Yuj91yE1f92s-gEhghKd0kle5RHSEXSTuwGjPdZwlmxA/exec">
 				<div class="row">
 					<div class="six columns">
 						<label for="exampleRecipientInput">Name</label>
-						<input class="u-full-width" type="text">
+						<input class="u-full-width" type="text" autocomplete="off" placeholder="이름을 입력해주세요"  name="name"/>
 					</div>
 					<div class="six columns">
+						<label for="exampleRecipientInput">Phone</label>
+						<input class="u-full-width" type="text" autocomplete="off" placeholder="전화번호를 입력해주세요"  name="contact"/>
+					</div>
+					<div class="six columns" style = "margin-left: 0%;">
 						<label for="exampleEmailInput">Email</label>
-						<input class="u-full-width" type="email">
+						<input class="u-full-width" type="email" autocomplete="off" placeholder="id@email.com" name="email"/>
 					</div>
 				</div>
 				<div class="row">
 					<label for="exampleMessage">Message</label>
-					<textarea class="u-full-width"></textarea>
+					<textarea class="u-full-width" placeholder="내용을 입력해주세요" name="body"></textarea>
 					<input class="button-primary" type="submit" value="Submit">
 				</div>
 			</form>
 		</div>
 	</section>
+	
+	
+	
+	
+	
+<!-- 	<section class="mt-8 text-xl px-4"> -->
+<!--     <h1 style="text-align: center; font-size: 25; margin-top: 100px; font-weight: 600;">제휴 문의하기</h1> -->
+<!--     <div class="mx-auto"> -->
+<!--         <form class="gform" method="POST" data-email="yunlinit@gmail.com" -->
+<!--             action="https://script.google.com/macros/s/AKfycbxkZTwkACh8C2St2dGm8mxtr3Yuj91yE1f92s-gEhghKd0kle5RHSEXSTuwGjPdZwlmxA/exec"> -->
+           
+<!-- <!--             <form class="gform" method="POST" data-email="yunlinit@gmail.com" action="https://script.google.com/macros/s/AKfycbxkZTwkACh8C2St2dGm8mxtr3Yuj91yE1f92s-gEhghKd0kle5RHSEXSTuwGjPdZwlmxA/exec" onsubmit="submitWriteEmailFormDone(this); return false;"> --> -->
+<!-- <!-- 이메일 전송 기능 구현 시 여기 수정해야함 --> -->
+
+<!--             <table class="write-box table-box-1 mx-auto mt-10" border="1"> -->
+<!--                 <tbody> -->
+<!--                     <tr> -->
+<!--                         <th style="font-weight: 600">이름</th> -->
+<!--                         <td><input class="title input input-bordered input-md w-full max-w-xs" autocomplete="off" type="text" -->
+<!--                             placeholder="이름을 입력해주세요" name="name" /> -->
+<!--                             <div style="display: inline-block; font-weight: 600; margin-left: 4em;">연락처</div> <input -->
+<!--                             class="title input input-bordered input-md w-full max-w-xs" autocomplete="off" type="text" -->
+<!--                             placeholder="전화번호를 입력해주세요" name="contact" style="margin-left: 1.8em" /></td> -->
+
+<!--                     </tr> -->
+
+<!--                     <tr> -->
+<!--                         <th style="font-weight: 600">이메일</th> -->
+<!--                         <td><input class="title input input-bordered input-md w-full " autocomplete="off" type="text" -->
+<!--                             placeholder="id@email.com" name="email" style="width: 780px" /></td> -->
+<!--                     </tr> -->
+<!--                     <tr> -->
+<!--                         <th style="font-weight: 600">내용</th> -->
+<!--                         <td><textarea placeholder="내용을 입력해주세요" name="body" class="textarea textarea-bordered textarea-lg" -->
+<!--                                 style="width: 780px; height: 300px;"></textarea> </script> -->
+<!--                             </div></td> -->
+<!--                     </tr> -->
+<!--                     <tr> -->
+<!--                         <th></th> -->
+<!--                         </br> -->
+<!--                         <td style="text-align: left;"> -->
+<!--                             <button class="writeBtn btn btn-sm" id="submitBtn" type="submit" value="등록" style="margin-left: 320px; margin-top: 10px;">문의하기</button> <span -->
+<!--                             style="float: right;"> -->
+<!--                                 <button class="backBtn btn btn-sm btn-ghost" id ="backBtn" class="" type="button" onclick="history.back();">뒤로가기</button> -->
+<!--                         </span> -->
+<!--                         </td> -->
+
+<!--                     </tr> -->
+<!--                 </tbody> -->
+
+
+<!--             </table> -->
+<!--         </form> -->
+
+
+<!--     </div> -->
+
+<!-- </section> -->
 
 
 
@@ -1285,6 +1357,32 @@ background-color: black;
 			</div>
 		</div>
 	</footer>
+
+	<!-- Mouse Cursor
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<!-- <img src="https://cur.cursors-4u.net/cursor.png" border="0" alt="Purple Spinning Heart Within A Heart" style="position:absolute; top: 0px; right: 0px;" /> -->
+
+<img src="https://cur.cursors-4u.net/cursor.png" border="0" alt="Light Red Pointer" style="position:absolute; top: 0px; right: 0px;" />
+
+
+
+	<!-- Send Email Alert Javascript
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+<script>
+document.querySelector(".gform").addEventListener("submit", function(event) {
+    var checkbox = document.getElementById("checkbox");
+        // 이메일 전송 알림
+        setTimeout(function() {
+            alert("이메일이 성공적으로 전송되었습니다!");
+            document.getElementById("submitBtn").disabled = false; // 문의하기 버튼 활성화
+            document.getElementById("backBtn").disabled = false; // 뒤로가기 버튼 활성화
+        }, 100); // 1초 후에 알림을 표시합니다.
+  
+});
+</script> 
+
+
 
 </body>
 </html>
