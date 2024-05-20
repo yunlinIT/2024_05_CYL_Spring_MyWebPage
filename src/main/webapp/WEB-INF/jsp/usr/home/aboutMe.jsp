@@ -1154,7 +1154,7 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 			<h1>My Skills*</h1>
 			<div class="block"></div>
 		</div>
-		<img src="https://velog.velcdn.com/images/yunlinit/post/20c2bddd-7b09-4b00-a034-7734f838500c/image.png"
+		<img src="https://velog.velcdn.com/images/yunlinit/post/7d06f223-f06d-499a-8a8c-4551c04bbcd9/image.png"
 			style="width: 100%;" alt="Services Image">
 		</div>
 	</section>

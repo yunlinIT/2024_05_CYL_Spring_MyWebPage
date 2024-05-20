@@ -119,6 +119,11 @@ body {
 }
 
 
+/* Cursor
+********************************************************************* */
+/* * {cursor: url(https://ani.cursors-4u.net/symbols/sym-8/sym758.ani), url(https://ani.cursors-4u.net/symbols/sym-8/sym758.png), auto !important;} */
+* {cursor: url(https://cur.cursors-4u.net/cursors/cur-9/cur267.cur), auto;}
+
 </style>
 
 </head>
@@ -139,9 +144,11 @@ body {
 </div>
 
 
+	<!-- Mouse Cursor
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<!-- <img src="https://cur.cursors-4u.net/cursor.png" border="0" alt="Purple Spinning Heart Within A Heart" style="position:absolute; top: 0px; right: 0px;" /> -->
 
-
-
+<img src="https://cur.cursors-4u.net/cursor.png" border="0" alt="Light Red Pointer" style="position:absolute; top: 0px; right: 0px;" />
 
 </html>
 
