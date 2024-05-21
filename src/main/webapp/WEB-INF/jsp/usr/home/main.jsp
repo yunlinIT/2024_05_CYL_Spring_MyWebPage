@@ -3,7 +3,13 @@
 <c:set var="pageTitle" value="장윤린의 Portfolio"></c:set>
 <%@ include file="../common/head.jspf"%>
 
-
+<!-- 우클릭 & 드래그 방지 -->
+<script type="text/javascript">
+        document.oncontextmenu = function() {
+            alert("오른쪽 마우스 버튼을 사용할 수 없어용♥"); // 우클릭 시 알림 메시지 표시
+            return false; // 기본 우클릭 메뉴를 비활성화
+        };
+</script>
 
 
 <style>
@@ -129,7 +135,8 @@ body {
 </head>
 
 
-
+<!-- 우클릭 & 드래그 방지 -->
+<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false" onkeydownn="return false">
 
 <div class="bg-animation">
 	<div class="bg-1"></div>
@@ -150,6 +157,7 @@ body {
 
 <img src="https://cur.cursors-4u.net/cursor.png" border="0" alt="Light Red Pointer" style="position:absolute; top: 0px; right: 0px;" />
 
+</body>
 </html>
 
 <%-- <%@ include file="../common/foot.jspf"%> --%>

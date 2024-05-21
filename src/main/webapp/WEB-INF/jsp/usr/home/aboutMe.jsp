@@ -7,6 +7,13 @@
 <script data-cfasync="false" type="text/javascript"
 		src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
 
+<!-- 우클릭 & 드래그 방지 -->
+<script type="text/javascript">
+        document.oncontextmenu = function() {
+            alert("오른쪽 마우스 버튼을 사용할 수 없어용♥"); // 우클릭 시 알림 메시지 표시
+            return false; // 기본 우클릭 메뉴를 비활성화
+        };
+</script>
 
 <script>
 	/*----------------------------------------------------*/
@@ -82,6 +89,8 @@ body {
 	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 	color: #222;
 }
+
+
 /* Grid
 ********************************************************************* */
 .container {
@@ -826,12 +835,12 @@ nav ul a:hover {
 }
 
  @media ( max-width : 1100px) { 
- 	.portfolio { */
+ 	.portfolio { 
  		flex-direction: column; 
  		align-items: stretch; 
  		gap: 0; 
- 	} */
- } */
+ 	} 
+ } 
 
 
 /* Contact Section
@@ -1003,7 +1012,10 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 
 </head>
 
-<body>
+<!-- 우클릭 & 드래그 방지 -->
+<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false" onkeydownn="return false">
+
+
 
 	<!-- Header Section
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -1222,9 +1234,9 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 					<h4>My Portfolio</h4>
 					<p style="font-family: Pretendard">👩🏻‍💻 장윤린의 웹 포트폴리오</p>
 					<span class="icon"></span>
-
 				</a>
 			</div>
+			
 		</div>
 	</section>
 
