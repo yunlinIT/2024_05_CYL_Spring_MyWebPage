@@ -525,99 +525,48 @@ nav ul a:hover {
 /*         opacity: 0; */
 /*     } */
 /* } */
+
 /* animated scroll arrow animation */
-@
--webkit-keyframes fade_move_down { 0% {
-	-webkit-transform: translate(0, -10px) rotate(45deg);
-	opacity: 0;
+@-webkit-keyframes fade_move_down {
+    0% {
+        -webkit-transform: translate(0, -10px) rotate(45deg);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: translate(0, 10px) rotate(45deg);
+        opacity: 0;
+    }
 }
 
-50
-%
-{
-opacity
-:
-1;
-}
-100
-%
-{
--webkit-transform
-:
-translate(
-0
-,
-10px
-)
-rotate(
-45deg
-);
-opacity
-:
-0;
-}
-}
-@
--moz-keyframes fade_move_down { 0% {
-	-moz-transform: translate(0, -10px) rotate(45deg);
-	opacity: 0;
+@-moz-keyframes fade_move_down {
+    0% {
+        -moz-transform: translate(0, -10px) rotate(45deg);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        -moz-transform: translate(0, 10px) rotate(45deg);
+        opacity: 0;
+    }
 }
 
-50
-%
-{
-opacity
-:
-1;
-}
-100
-%
-{
--moz-transform
-:
-translate(
-0
-,
-10px
-)
-rotate(
-45deg
-);
-opacity
-:
-0;
-}
-}
-@
-keyframes fade_move_down { 0% {
-	transform: translate(0, -10px) rotate(45deg);
-	opacity: 0;
-}
-
-50
-%
-{
-opacity
-:
-1;
-}
-100
-%
-{
-transform
-:
-translate(
-0
-,
-10px
-)
-rotate(
-45deg
-);
-opacity
-:
-0;
-}
+@keyframes fade_move_down {
+    0% {
+        transform: translate(0, -10px) rotate(45deg);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(0, 10px) rotate(45deg);
+        opacity: 0;
+    }
 }
 
 /* Intro Section
@@ -745,6 +694,7 @@ opacity
 	object-position: center;
 	height: 400px;
 	width: 330px;
+	border-radius: 20px;
 }
 
 @media ( max-width : 991px) {
@@ -787,43 +737,58 @@ opacity
 	}
 }
 
+.image-column {
+	flex: 0 0 auto;
+	width: 350px; /* Adjust the width as needed */
+}
+
+@media ( max-width : 991px) {
+	.image-column {
+       display: flex;
+       flex-direction: row;
+       flex-wrap: nowrap;
+       margin-top: -50px;
+       margin-left: -10px;
+	}
+}
+
 .profile-image {
+	margin-top: 10px;
 	width: 100%;
-	flex-grow: 1;
-	object-fit: auto;
-	object-position: center;
-	aspect-ratio: 0.91;
+	height: 350px;
 	object-fit: cover;
 	border-radius: 20px;
+	width: 100%;
 }
 
 @media ( max-width : 991px) {
 	.profile-image {
 		max-width: 100%;
-		width: 200px;
-		margin-top: -80px;
+		width: 150px;
+		height: 200px;
 		margin-left: 30px;
+		margin-top: 30px;
 	}
 }
 
 .info-column {
+	flex: 1;
 	display: flex;
 	flex-direction: column;
-	width: 63 margin-left: 20px;
 	margin-left: 50px;
 }
 
 @media ( max-width : 991px) {
 	.info-column {
 		width: 100%;
+		margin-left: 0;
 	}
 }
 
 .profile-info {
 	color: #5e3bee;
-	/* 	padding-top: 39px; */
 	font: 500 22px/25px Inter, sans-serif;
-	width: 480px;
+	width: 520px;
 	margin-top: 20px;
 }
 
@@ -831,13 +796,19 @@ opacity
 	.profile-info {
 		max-width: 100%;
 		margin-top: 40px;
+		margin-left: 25px;
+		width: 800px;
+		line-height: 50px;
+		white-space: nowrap;
 	}
 }
+
+
+
 
 .highlight-text {
 	font-family: Pretendard-Regular;
 	font-weight: 600;
-	/* 	color: rgba(94, 59, 238, 1); */
 	color: #A58EFF;
 }
 
@@ -958,10 +929,11 @@ footer p {
 	margin: 20px 0 0 0;
 }
 
-.socialIcons {
-	font-size: 34px;
-	color: rgba(255, 255, 255, 0.7);
+
+.social-btns{
+margin-top: 20px !important;
 }
+
 
 .nine>p {
 	line-height: 3px;
@@ -1138,8 +1110,11 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 				<div class="profile-content">
 					<div class="image-column">
 						<img loading="lazy"
+							src="https://velog.velcdn.com/images/yunlinit/post/80da7aaf-3e38-43a2-8707-3401f021f6d0/image.jpg"
+							class="profile-image profile-image-1" alt="Profile image of 장윤린" /> 
+						<img loading="lazy"
 							src="https://velog.velcdn.com/images/yunlinit/post/0fc499e7-71b2-486c-a43a-af22895cc62c/image.jpg"
-							class="profile-image" alt="Profile image of 장윤린" />
+							class="profile-image profile-image-2" alt="Profile image of 장윤린" />
 					</div>
 					<div class="info-column">
 						<div class="profile-info">
@@ -1173,6 +1148,9 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 								개발자 양성 과정</p>
 							<p class="regular-text">&nbsp;&nbsp;&nbsp;&nbsp;| 2023.12.07
 								~ 2024.05.24</p>
+							<p class="regular-text">&nbsp;&nbsp;&nbsp;&nbsp;| <a
+									href="https://supreme-meat-4a7.notion.site/AI-Open-API-7906927420cf4c7596b6a6e509ded7ce?pvs=74"
+									target="blank">성적 우수상 </a></p>
 							<p class="highlight-text">학력</p>
 							<p class="regular-text">University of Wisconsin-Madison
 								(위스콘신주립대학교)</p>
@@ -1180,6 +1158,14 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 								2009.12</p>
 							<p class="regular-text">대전국제학교(고등학교) | 2005.08 ~ 2008.06</p>
 							<p class="highlight-text">기타 활동 사항</p>
+							<p class="regular-text">코리아 IT 수강생 인터뷰</p>
+							<p class="regular-text">&nbsp;&nbsp;&nbsp;&nbsp;| 본 과정에서 우수한
+								성적으로 코리아IT아카데미 대전지점 수강생 인터뷰 진행</p>
+							<p class="regular-text">
+								&nbsp;&nbsp;&nbsp;&nbsp;| <a
+									href="https://g-sa.koreaisacademy.com/community/interview_view.asp?txtContentSeq=458&txtCurPage=1&gubun=1"
+									target="blank">링크 </a>
+							</p>
 							<p class="regular-text">동아어학원 - 유·초등부 담임강사, 교수부장 | 2017.03 ~
 								2023.08</p>
 							<p class="regular-text">IBT어학원 - 초·중 영어강사 | 2011.08 ~ 2013.11</p>
@@ -1277,7 +1263,8 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 
 			<!-- second row -->
 			<div class="row">
-				<a href="https://supreme-meat-4a7.notion.site/Prion-7e4cd98d0a674339aeffded603eb4efd"
+				<a
+					href="https://supreme-meat-4a7.notion.site/Prion-7e4cd98d0a674339aeffded603eb4efd"
 					target="blank" class="three columns" style="text-decoration: none;">
 					<div class="box">
 						<div class="project-box">
@@ -1287,7 +1274,8 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 						</div>
 					</div> <br>
 					<h5>[외주] Prion</h5>
-					<p style="font-family: Pretendard; font-weight: 600;">(주)프리온 회사 소개 및 제조 설비 관련 내용을 담은 홈페이지 제작 의뢰 </p> <span class="icon"></span>
+					<p style="font-family: Pretendard; font-weight: 600;">(주)프리온 회사
+						소개 및 제조 설비 관련 내용을 담은 홈페이지 제작 의뢰</p> <span class="icon"></span>
 
 				</a>
 
@@ -1342,12 +1330,12 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
 	<footer>
-		<div class="container">
+		<div class="container footer-container">
 			<div class="nine columns">
 				<p>Portfolio* created by Chang Yun Lin</p>
 				<p>Copyright © CHANG YUN LIN. All Right Reserved.</p>
 			</div>
-			<div class="three columns">
+			<div class="three columns social-btns">
 				<a href="https://github.com/yunlinIT" target="blank" class="icon">GitHub</a>
 				&nbsp;&nbsp; <a href="https://velog.io/@yunlinit" target="blank"
 					class="icon">Velog</a> &nbsp;&nbsp; <a
