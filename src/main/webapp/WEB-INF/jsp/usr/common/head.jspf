@@ -8,23 +8,10 @@
 <link rel="stylesheet" href="/resource/common.css" />
 
 <script src="/resource/common.js" defer="defer"></script>
-<!-- 테일윈드 불러오기 -->
-<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" /> -->
-<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
 
-<!-- daisy ui 불러오기 -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/daisyui/4.6.1/full.css" />
-
-<!-- 폰트어썸 불러오기 -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 
 <!-- 제이쿼리 불러오기 -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
-
-<!-- 구글폰트(아이콘) 불러오기 -->
-<link rel="stylesheet"
-	href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
 
 <!-- 구글폰트 Urbanist -->
@@ -34,126 +21,12 @@
 	href="https://fonts.googleapis.com/css2?family=Suranna&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
 	rel="stylesheet">
 
-<!-- 구글폰트 Barlow -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
-	href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
-	rel="stylesheet">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Hi+Melody&family=Nanum+Brush+Script&family=Nanum+Pen+Script&family=Pattaya&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
 
-
-</head>
 <style>
-/* 헤더가 고정 위치로 설정될 수 있도록 수정 */
-.header-container {
-	z-index: 999;
-	max-width: 100%; /* 최대 너비를 조정 */
-	margin: 0 auto;
-	position: fixed; /* 고정 위치로 설정 */
-	top: 0; /* 상단에 배치 */
-	left: 0; /* 왼쪽에 배치 */
-	width: 100%; /* 가로 너비 100% 설정 */
-	background-color: white; /* 배경색 설정 */
-}
 
-/* 가운데 라인을 조정하여 헤더가 정렬되도록 수정 */
-.header-line {
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-	border-color: #CACACA;
-	border-style: solid;
-	border-bottom-width: 1px;
-	margin-top: -2px;
-	height: 2px;
-	width: calc(100% - 40px); /* 가로 너비 조정 */
-}
-
-/* 반응형 디자인을 위한 미디어 쿼리 추가 */
-@media ( max-width : 991px) {
-	.header-container {
-		padding: 0 10px; /* 작은 화면에서의 패딩 조정 */
-	}
-	.header-line {
-		width: calc(100% - 20px); /* 작은 화면에서 가로 너비 조정 */
-	}
-}
-
-@media ( max-width : 991px) {
-	.header-line {
-		max-width: 100%;
-	}
-}
-
-.join-btn {
-	font-family: Pretendard, sans-serif;
-	justify-content: center;
-	border-radius: 7px;
-	background-color: #d5f1e2;
-	/* background-color: rgba(213, 241, 226, 0.3); */
-	align-self: stretch;
-	color: #3b3d40;
-	white-space: nowrap;
-	padding: 10px 25px; /* 패딩을 조정하여 버튼의 크기를 변경합니다 */
-	font-size: 14px; /* 글꼴 크기를 조정합니다 */
-	/* 추가적인 스타일을 필요에 따라 적용하세요 */
-}
-
-.header-btns {
-	font-size: 14px;
-}
-
-@media ( max-width : 991px) {
-	.div-6 {
-		white-space: initial;
-		padding: 0 20px;
-	}
-}
 </style>
+
 </head>
 
 
-<body>
-<!-- 	<div class="header-container"> -->
-<!-- 		<header> -->
-<!-- 			<div class="h-20 flex mx-auto items-center text-3xl"> -->
-<!-- 								<a href="/" class="logo logo1" -->
-<!-- 									style="font-family: pattaya; color: #696969; margin-left: 28px;">Trip</a> -->
-<!-- 								<a href="/" class="logo" -->
-<!-- 									style="font-family: pattaya; color: #81C8A2">Angle</a> -->
-<!-- 				<div class="flex-grow"></div> -->
-<!-- 				<ul class="flex"> -->
-<!-- 					<li> -->
-<!-- 						<a class="articleList-btn header-btns " href="../article/list?boardId=1&page=1">MAIN</a> -->
-<!-- 					</li> -->
-<!-- 					<li> -->
-<!-- 						<a class="login-btn header-btns" href="../tripReview/reviewList">ABOUT</a> -->
-<!-- 					</li> -->
-
-<!-- 					<li> -->
-<!-- 						<a class="write-btns header-btns " href="../tripReview/reviewWrite">PROJECT</a> -->
-<!-- 					</li> -->
-
-<!-- 					<li> -->
-<!-- 						<a class="write-btns header-btns " href="../tripReview/reviewWrite">CONTACT</a> -->
-						
-
-<!-- 					</li> -->
-
-
-
-<!-- 				</ul> -->
-<!-- 			</div> -->
-<!-- 			<div class="div-8 header-line"></div> -->
-<!-- 		</header> -->
-<!-- 	</div> -->
-</body>

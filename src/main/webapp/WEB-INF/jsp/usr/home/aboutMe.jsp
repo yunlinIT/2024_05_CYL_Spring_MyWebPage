@@ -1,34 +1,32 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:set var="pageTitle" value="장윤린의 Portfolio"></c:set>
 <%@ include file="../common/head.jspf"%>
 
 
 <script data-cfasync="false" type="text/javascript"
-		src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
+	src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
 
 <!-- 우클릭 & 드래그 방지 -->
 <script type="text/javascript">
-        document.oncontextmenu = function() {
-            alert("오른쪽 마우스 버튼을 사용할 수 없어용♥"); // 우클릭 시 알림 메시지 표시
-            return false; // 기본 우클릭 메뉴를 비활성화
-        };
+	document.oncontextmenu = function() {
+		alert("오른쪽 마우스 버튼을 사용할 수 없어용♥"); // 우클릭 시 알림 메시지 표시
+		return false; // 기본 우클릭 메뉴를 비활성화
+	};
 </script>
 
 <script>
 	/*----------------------------------------------------*/
 	/* Navigation
 	 ------------------------------------------------------ */
-
 	$(window).scroll(function() {
-
 		if ($(window).scrollTop() == 0) {
 			$('.main_nav').addClass('sticky');
 		} else {
 			$('.main_nav').removeClass('sticky');
 		}
 	});
-
 	// Mobile Navigation
 	$('.mobile-toggle').click(function() {
 		if ($('.main_nav').hasClass('open-nav')) {
@@ -37,34 +35,26 @@
 			$('.main_nav').addClass('open-nav');
 		}
 	});
-
 	$('.main_nav li a').click(function() {
 		if ($('.main_nav').hasClass('open-nav')) {
 			$('.navigation').removeClass('open-nav');
 			$('.main_nav').removeClass('open-nav');
 		}
 	});
-
 	/*----------------------------------------------------*/
 	/* Smooth Scrolling
 	 ------------------------------------------------------ */
-
 	jQuery(document).ready(function($) {
-
 		$('.smoothscroll').on('click', function(e) {
 			e.preventDefault();
-
 			var target = this.hash, $target = $(target);
-
 			$('html, body').stop().animate({
 				'scrollTop' : $target.offset().top
 			}, 800, 'swing', function() {
 				window.location.hash = target;
 			});
 		});
-
 	});
-
 	TweenMax.staggerFrom(".heading", 0.8, {
 		opacity : 0,
 		y : 20,
@@ -90,6 +80,9 @@ body {
 	color: #222;
 }
 
+a {
+	text-decoration: none !important;
+}
 
 /* Grid
 ********************************************************************* */
@@ -136,7 +129,6 @@ body {
 	.three.columns {
 		width: 22%;
 	}
-	
 	.four.columns {
 		width: 30.6666666667%;
 	}
@@ -174,6 +166,7 @@ body {
 	.one-half.column {
 		width: 48%;
 	}
+
 	/* Offsets */
 	.offset-by-one.column, .offset-by-one.columns {
 		margin-left: 8.66666666667%;
@@ -218,6 +211,7 @@ body {
 		margin-left: 52%;
 	}
 }
+
 /* Typography
 ********************************************************************* */
 h1, h2, h3, h4, h5, h6 {
@@ -287,6 +281,7 @@ h6 {
 p {
 	margin-top: 0;
 }
+
 /* Links
 ********************************************************************* */
 a {
@@ -362,8 +357,10 @@ header {
 	position: fixed;
 	top: 0;
 	width: 100%;
-	z-index: 1000; /* 다른 요소보다 위에 표시되도록 설정 */
-	background-color: #FFFFFF; /* 필요에 따라 배경색 설정 */
+	z-index: 1000;
+	/* 다른 요소보다 위에 표시되도록 설정 */
+	background-color: #FFFFFF;
+	/* 필요에 따라 배경색 설정 */
 	padding-top: 23px;
 }
 
@@ -502,7 +499,6 @@ nav ul a:hover {
 /*         opacity: 0; */
 /*     } */
 /* } */
-
 /* @-moz-keyframes fade_move_down { */
 /*     0% { */
 /*         -moz-transform: translate(0, -10px) rotate(45deg); */
@@ -516,7 +512,6 @@ nav ul a:hover {
 /*         opacity: 0; */
 /*     } */
 /* } */
-
 /* @keyframes fade_move_down { */
 /*     0% { */
 /*         transform: translate(0, -10px) rotate(45deg); */
@@ -530,52 +525,100 @@ nav ul a:hover {
 /*         opacity: 0; */
 /*     } */
 /* } */
-
-
-
 /* animated scroll arrow animation */
-@-webkit-keyframes fade_move_down {
-    0% {
-        -webkit-transform: translate(0, -10px) rotate(45deg);
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        -webkit-transform: translate(0, 10px) rotate(45deg);
-        opacity: 0;
-    }
+@
+-webkit-keyframes fade_move_down { 0% {
+	-webkit-transform: translate(0, -10px) rotate(45deg);
+	opacity: 0;
 }
 
-@-moz-keyframes fade_move_down {
-    0% {
-        -moz-transform: translate(0, -10px) rotate(45deg);
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        -moz-transform: translate(0, 10px) rotate(45deg);
-        opacity: 0;
-    }
+50
+%
+{
+opacity
+:
+1;
+}
+100
+%
+{
+-webkit-transform
+:
+translate(
+0
+,
+10px
+)
+rotate(
+45deg
+);
+opacity
+:
+0;
+}
+}
+@
+-moz-keyframes fade_move_down { 0% {
+	-moz-transform: translate(0, -10px) rotate(45deg);
+	opacity: 0;
 }
 
-@keyframes fade_move_down {
-    0% {
-        transform: translate(0, -10px) rotate(45deg);
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        transform: translate(0, 10px) rotate(45deg);
-        opacity: 0;
-    }
+50
+%
+{
+opacity
+:
+1;
+}
+100
+%
+{
+-moz-transform
+:
+translate(
+0
+,
+10px
+)
+rotate(
+45deg
+);
+opacity
+:
+0;
+}
+}
+@
+keyframes fade_move_down { 0% {
+	transform: translate(0, -10px) rotate(45deg);
+	opacity: 0;
 }
 
+50
+%
+{
+opacity
+:
+1;
+}
+100
+%
+{
+transform
+:
+translate(
+0
+,
+10px
+)
+rotate(
+45deg
+);
+opacity
+:
+0;
+}
+}
 
 /* Intro Section
 ********************************************************************* */
@@ -585,8 +628,10 @@ nav ul a:hover {
 	align-items: center;
 	justify-content: center;
 	height: 600px;
-	width: 100vw; /* 화면의 가로 길이를 100%로 설정 */
-	padding: 50px 0px; /* 필요에 따라 주석을 해제 */
+	width: 100vw;
+	/* 화면의 가로 길이를 100%로 설정 */
+	padding: 50px 0px;
+	/* 필요에 따라 주석을 해제 */
 }
 
 @media ( max-width : 991px) {
@@ -665,7 +710,7 @@ nav ul a:hover {
 	width: 800px; !
 	important color: var(--Body, #1c1e53);
 	margin-top: 62px;
-	font: 500 20px Pretendard, sans-serif;
+	font: 600 18px Pretendard, sans-serif;
 	width: 800px !important;
 }
 
@@ -696,7 +741,7 @@ nav ul a:hover {
 }
 
 .profile-image1 {
-	object-fit: auto;
+	object-fit: cover;
 	object-position: center;
 	height: 400px;
 	width: 330px;
@@ -791,7 +836,7 @@ nav ul a:hover {
 
 .highlight-text {
 	font-family: Pretendard-Regular;
-	font-weight: 400;
+	font-weight: 600;
 	/* 	color: rgba(94, 59, 238, 1); */
 	color: #A58EFF;
 }
@@ -799,9 +844,9 @@ nav ul a:hover {
 .regular-text {
 	font-family: Pretendard-Regular;
 	color: black;
-	font-size: 15px;
+	font-size: 14px;
 	line-height: 5px;
-	font-weight: 400;
+	font-weight: 600;
 }
 
 /* Skills Section
@@ -819,7 +864,8 @@ nav ul a:hover {
 
 /* 프로젝트 이미지 hover 하면 이미지 확대 효과 */
 .box .project-box {
-	position: relative; /* 상대적 위치 설정 */
+	position: relative;
+	/* 상대적 위치 설정 */
 	width: 220px;
 	height: 120px;
 	border-radius: 10px;
@@ -827,21 +873,22 @@ nav ul a:hover {
 }
 
 .box .project-box img {
-	transition: transform 0.2s ease-in-out; /* 서서히 변하는(확대) 효과 */
+	transition: transform 0.2s ease-in-out;
+	/* 서서히 변하는(확대) 효과 */
 }
 
 .box .project-box:hover img {
-	transform: scale(1.1); /* 이미지 확대 효과 */
+	transform: scale(1.1);
+	/* 이미지 확대 효과 */
 }
 
- @media ( max-width : 1100px) { 
- 	.portfolio { 
- 		flex-direction: column; 
- 		align-items: stretch; 
- 		gap: 0; 
- 	} 
- } 
-
+@media ( max-width : 1100px) {
+	.portfolio {
+		flex-direction: column;
+		align-items: stretch;
+		gap: 0;
+	}
+}
 
 /* Contact Section
 ********************************************************************* */
@@ -891,6 +938,7 @@ input[type="submit"]:hover {
 	background: #F9DBAE;
 	text-decoration: none;
 }
+
 /* Footer Section
 ********************************************************************* */
 footer {
@@ -900,7 +948,7 @@ footer {
 	background: -moz-linear-gradient(-45deg, #cab6fa 0%, #f9dbad 100%);
 	background: -webkit-linear-gradient(-45deg, #cab6fa 0%, #f9dbad 100%);
 	background: linear-gradient(135deg, #cab6fa 0%, #f9dbad 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cab6fa',
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cab6fa',
 		endColorstr='#f9dbad', GradientType=1);
 	box-sizing: border-box;
 }
@@ -915,13 +963,9 @@ footer p {
 	color: rgba(255, 255, 255, 0.7);
 }
 
-
-
-
-.nine > p {
-line-height: 3px;
+.nine>p {
+	line-height: 3px;
 }
-
 
 /* Lists
 ********************************************************************* */
@@ -946,6 +990,7 @@ ul ul, ul ol, ol ol, ol ul {
 li {
 	margin-bottom: 1rem;
 }
+
 /* Spacing
 ********************************************************************* */
 button, .button {
@@ -959,6 +1004,7 @@ input, textarea, select, fieldset {
 pre, blockquote, dl, figure, table, p, ul, ol, form {
 	margin-bottom: 2.5rem;
 }
+
 /* Utilities
 ********************************************************************* */
 .u-full-width {
@@ -978,6 +1024,7 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 .u-pull-left {
 	float: left;
 }
+
 /* Clearing
 ********************************************************************* */
 .container:after, .row:after, .u-cf {
@@ -985,6 +1032,7 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 	display: table;
 	clear: both;
 }
+
 /* Misc
 ********************************************************************* */
 .icon {
@@ -995,7 +1043,8 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 .block {
 	width: 70px;
 	height: 2px;
-	background: #e55d87; /* Old browsers */
+	background: #e55d87;
+	/* Old browsers */
 	background: -moz-linear-gradient(-45deg, #cab6fa 0%, #f9dbad 100%);
 	background: -webkit-linear-gradient(-45deg, #cab6fa 0%, #f9dbad 100%);
 	background: linear-gradient(135deg, #cab6fa 0%, #f9dbad 100%);
@@ -1006,16 +1055,17 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 ********************************************************************* */
 /* * {cursor: url(https://ani.cursors-4u.net/symbols/sym-8/sym758.ani), url(https://ani.cursors-4u.net/symbols/sym-8/sym758.png), auto !important;} */
 /* * {cursor: url(https://cur.cursors-4u.net/cursors/cur-9/cur271.cur), auto;} */
-* {cursor: url(https://cur.cursors-4u.net/cursors/cur-9/cur267.cur), auto;}
-
+* {
+	cursor: url(https://cur.cursors-4u.net/cursors/cur-9/cur267.cur), auto;
+}
 </style>
 
 </head>
 
 <!-- 우클릭 & 드래그 방지 -->
-<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false" onkeydownn="return false">
 
-
+<body oncontextmenu="return false" onselectstart="return false"
+	ondragstart="return false" onkeydownn="return false">
 
 	<!-- Header Section
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -1024,30 +1074,17 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 		<div class="main_nav">
 			<div class="container">
 				<div class="mobile-toggle">
-					<span></span>
-					<span></span>
-					<span></span>
+					<span></span> <span></span> <span></span>
 				</div>
 				<nav>
 					<ul>
-						<li>
-							<a href="main">Home*</a>
+						<li><a href="https://yunlinit.github.io/myportfolio/">Home*</a>
 						</li>
-						<li>
-							<a class="smoothscroll" href="#header">Intro*</a>
-						</li>
-						<li>
-							<a class="smoothscroll" href="#about">About*</a>
-						</li>
-						<li>
-							<a class="smoothscroll" href="#skills">Skills*</a>
-						</li>
-						<li>
-							<a class="smoothscroll" href="#portfolio">Projects*</a>
-						</li>
-						<li>
-							<a class="smoothscroll" href="#contact">Contact*</a>
-						</li>
+						<li><a class="smoothscroll" href="#header">Intro*</a></li>
+						<li><a class="smoothscroll" href="#about">About*</a></li>
+						<li><a class="smoothscroll" href="#skills">Skills*</a></li>
+						<li><a class="smoothscroll" href="#portfolio">Projects*</a></li>
+						<li><a class="smoothscroll" href="#contact">Contact*</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -1059,24 +1096,18 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 						<div class="text-column">
 							<div class="greeting-section">
 								<h1 class="greeting-text">
-									👋🏼 안녕하세요,
-									<span class="highlight"> 웹개발자</span>
-									장윤린입니다.
+									👋🏼 안녕하세요, <span class="highlight"> 신입 웹개발자</span> 장윤린입니다.
 								</h1>
 								<p class="description">
-									이 포트폴리오는 제가 걸어온 여정과 끊임없는 발전을 담아냈습니다.
-									<br />
-									새로운 기술을 배우고 실험하는 것을 즐기며, 개인 프로젝트 뿐만
-									<br />
-									아니라 팀 프로젝트 경험을 통해 협업 능력을 키워왔습니다. 앞으로
-									<br />
-									개발자로서 성장하며 사용자 중심의 서비스를 만들어나가고 싶습니다.
+									이 포트폴리오는 제가 걸어온 여정과 끊임없는 발전을 담아냈습니다. <br /> 새로운 기술을 배우고 실험하는
+									것을 즐기며, 개인 프로젝트 뿐만 <br /> 아니라 팀 프로젝트 경험을 통해 협업 능력을 키워왔습니다. 앞으로
+									<br /> 개발자로서 성장하며 사용자 중심의 서비스를 만들어나가고 싶습니다.
 								</p>
 							</div>
 						</div>
 						<div class="image-column">
 							<img loading="lazy"
-								src="https://cdn.builder.io/api/v1/image/assets/TEMP/1c57780b862aa0d1e8f27c380c414913470446adf16e859de1e6f759fcd141c1?apiKey=725f06f0daeb4ab382150ea4b4cf3550&"
+								src="https://velog.velcdn.com/images/yunlinit/post/22259481-3773-4045-8912-c441348fb103/image.jpg"
 								alt="Profile Image" class="profile-image1" />
 						</div>
 					</div>
@@ -1093,10 +1124,8 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 		</a>
 	</header>
 
-
 	<!-- About Section
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-
 
 	<section id="about">
 		<div class="container">
@@ -1114,40 +1143,48 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 					</div>
 					<div class="info-column">
 						<div class="profile-info">
-							<span class="highlight-text inline-block" style="font-size: 30px; font-weight: bold; color: black;">장윤린</span>
-							&nbsp;&nbsp;
-							<a href="https://github.com/yunlinIT" target="blank" class="inline-block" style="font-size: 15px;">
-								<img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub"
-									style="width: 30px; height: 30px;">
+							<span class="highlight-text inline-block"
+								style="font-size: 30px; font-weight: bold; color: black;">장윤린</span>
+							&nbsp;&nbsp; <a href="https://github.com/yunlinIT" target="blank"
+								class="inline-block" style="font-size: 15px;"> <img
+								src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+								alt="GitHub" style="width: 30px; height: 30px;">
+							</a> &nbsp; <a href="https://velog.io/@yunlinit" target="blank"
+								class="inline-block" style="font-size: 15px;"> <img
+								src="https://images.velog.io/images/velog/profile/9aa07f66-5fcd-41f4-84f2-91d73afcec28/green%20favicon.png"
+								alt="Velog" style="width: 23px; height: 23px;">
+							</a> &nbsp; <a href="https://www.youtube.com/@yunlinit"
+								target="blank" class="inline-block" style="font-size: 15px;">
+								<img
+								src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTowJjFW22_21ogdZ9nauAIrOeNsODULE319wj_6iFeQA&s"
+								alt="YouTube" style="width: 30px; height: 20px;">
 							</a>
-							&nbsp;
-							<a href="https://velog.io/@yunlinit" target="blank" class="inline-block" style="font-size: 15px;">
-								<img src="https://images.velog.io/images/velog/profile/9aa07f66-5fcd-41f4-84f2-91d73afcec28/green%20favicon.png" alt="Velog"
-									style="width: 23px; height: 23px;">
-							</a>
-							&nbsp;
-							<a href="https://www.youtube.com/@yunlinit" target="blank" class="inline-block" style="font-size: 15px;">
-								<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTowJjFW22_21ogdZ9nauAIrOeNsODULE319wj_6iFeQA&s"
-									alt="YouTube" style="width: 30px; height: 20px;">
-							</a>
-							
+
 							</p>
 							<p class="regular-text">📞 010-4249-0977</p>
 							<p class="regular-text">✉️ yunlinit@gmail.com</p>
-							<p class="regular-text">🗯️ 특기 : 영어 </p>
+							<p class="regular-text">🗯️ 특기 : 영어</p>
 							<p class="highlight-text">교육과정</p>
-							<p class="regular-text">코리아IT아카데미 Java 과정 | 2023.10.11 ~ 2023.11.07</p>
-							<p class="regular-text">코리아IT아카데미 DBMS 과정 | 2023.11.08 ~ 2023.12.05</p>
-							<p class="regular-text">프롬프트 AI & Open API & 공공데이터를 활용한 웹/앱 개발자 양성 과정</p>
-							<p class="regular-text">&nbsp;&nbsp;&nbsp;&nbsp;| 2023.12.07 ~ 2024.05.24</p>
+							<p class="regular-text">코리아IT아카데미 Java 과정 | 2023.10.11 ~
+								2023.11.07</p>
+							<p class="regular-text">코리아IT아카데미 DBMS 과정 | 2023.11.08 ~
+								2023.12.05</p>
+							<p class="regular-text">프롬프트 AI & Open API & 공공데이터를 활용한 웹/앱
+								개발자 양성 과정</p>
+							<p class="regular-text">&nbsp;&nbsp;&nbsp;&nbsp;| 2023.12.07
+								~ 2024.05.24</p>
 							<p class="highlight-text">학력</p>
-							<p class="regular-text">University of Wisconsin-Madison (위스콘신주립대학교)</p>
-							<p class="regular-text">&nbsp;&nbsp;&nbsp;&nbsp;| 2008.08 ~ 2009.12</p>
+							<p class="regular-text">University of Wisconsin-Madison
+								(위스콘신주립대학교)</p>
+							<p class="regular-text">&nbsp;&nbsp;&nbsp;&nbsp;| 2008.08 ~
+								2009.12</p>
 							<p class="regular-text">대전국제학교(고등학교) | 2005.08 ~ 2008.06</p>
 							<p class="highlight-text">기타 활동 사항</p>
-							<p class="regular-text">동아어학원 - 유·초등부 담임강사, 교수부장 | 2017.03 ~ 2023.08</p>
+							<p class="regular-text">동아어학원 - 유·초등부 담임강사, 교수부장 | 2017.03 ~
+								2023.08</p>
 							<p class="regular-text">IBT어학원 - 초·중 영어강사 | 2011.08 ~ 2013.11</p>
-							<p class="regular-text">개인 영어과외 - 초·중·고 영어과외 | 2010.12 ~ 2018.01</p>
+							<p class="regular-text">개인 영어과외 - 초·중·고 영어과외 | 2010.12 ~
+								2018.01</p>
 						</div>
 					</div>
 				</div>
@@ -1155,8 +1192,6 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 			</div>
 		</div>
 	</section>
-
-
 
 	<!-- Skills Section
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -1166,11 +1201,11 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 			<h1>My Skills*</h1>
 			<div class="block"></div>
 		</div>
-		<img src="https://velog.velcdn.com/images/yunlinit/post/7d06f223-f06d-499a-8a8c-4551c04bbcd9/image.png"
+		<img
+			src="https://velog.velcdn.com/images/yunlinit/post/7d06f223-f06d-499a-8a8c-4551c04bbcd9/image.png"
 			style="width: 100%;" alt="Services Image">
 		</div>
 	</section>
-
 
 	<!-- Portfolio Section
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -1178,97 +1213,120 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 	<section id="portfolio">
 		<div class="container">
 			<div class="row">
-				<h1>My Projects</h1>
+				<h1>My Projects*</h1>
 				<div class="block"></div>
-				<p style="font-family: Urbanist">Click to visit the repository of each project.</p>
+				<p style="font-family: Urbanist">Click to visit the repository
+					of each project.</p>
 			</div>
+
+			<!-- first row -->
 			<div class="row">
-				<a href = "https://github.com/yunlinIT/2024_01_Spring_Crema" target= "blank" class="three columns">
+				<a href="https://github.com/yunlinIT/2024_01_Spring_Crema"
+					target="blank" class="three columns" style="text-decoration: none;">
 					<div class="box">
 						<div class="project-box">
 							<img class="project-img"
 								src="https://velog.velcdn.com/images/yunlinit/post/b74e2e3c-d69b-44f6-bc29-d9855d2acc46/image.png"
 								style="width: 220px; height: 120px; object-fit: auto; border-radius: 10px;" />
 						</div>
-					</div>
-					<br>
+					</div> <br>
 					<h4>Crema</h4>
-					<p style="font-family: Pretendard">☕ 날씨 기반 대전 카페 추천 및 테마별 카페검색 플랫폼</p>
-					<span class="icon"></span>
+					<p style="font-family: Pretendard; font-weight: 600;">☕ 날씨 기반
+						대전 카페 추천 및 테마별 카페검색 플랫폼</p> <span class="icon"></span>
 
-				</a>
-				<a href="https://github.com/fake150907/Trip_Angle_24_04" target="blank" class="three columns">
+				</a> <a href="https://github.com/fake150907/Trip_Angle_24_04"
+					target="blank" class="three columns" style="text-decoration: none;">
 					<div class="box">
 						<div class="project-box">
-							<img src="https://velog.velcdn.com/images/insamju300/post/829f1d9e-b53a-4d35-b945-9288fcf07ff9/image.png"
+							<img
+								src="https://velog.velcdn.com/images/insamju300/post/829f1d9e-b53a-4d35-b945-9288fcf07ff9/image.png"
 								style="width: 220px; height: 120px; object-fit: auto; border-radius: 10px;" />
 						</div>
-					</div>
-					<br>
+					</div> <br>
 					<h4>TripAngle</h4>
-					<p style="font-family: Pretendard">🛫 GPT 기반의 여행, 패션, 날씨 통합 추천 서비스</p>
-					<span class="icon"></span>
+					<p style="font-family: Pretendard; font-weight: 600;">🛫 GPT
+						기반의 여행, 패션, 날씨 통합 추천 서비스</p> <span class="icon"></span>
 
-				</a>
-				<a href="https://github.com/yunlinIT/todoapp_2024_04" target="blank" class="three columns">
+				</a> <a href="https://github.com/yunlinIT/todoapp_2024_04"
+					target="blank" class="three columns" style="text-decoration: none;">
 					<div class="box">
 						<div class="project-box">
-							<img src="https://velog.velcdn.com/images/yunlinit/post/9985f232-fc1c-4ba5-952b-8b5a5f613a18/image.png"
+							<img
+								src="https://velog.velcdn.com/images/yunlinit/post/9985f232-fc1c-4ba5-952b-8b5a5f613a18/image.png"
 								style="width: 220px; height: 120px; object-fit: auto; border-radius: 10px;" />
 						</div>
-					</div>
-					<br>
+					</div> <br>
 					<h4>My TODO List !</h4>
-					<p style="font-family: Pretendard">📝 직관적으로 사용가능 한 할일 목록 앱 </p>
-					<span class="icon"></span>
+					<p style="font-family: Pretendard; font-weight: 600;">📝 직관적으로
+						사용가능 한 할일 목록 앱</p> <span class="icon"></span>
 
-				</a>
-				<a href="https://github.com/yunlinIT/2024_05_Spring_MyWebPage" target="blank" class="three columns">
+				</a> <a href="https://github.com/yunlinIT/2024_05_Spring_MyWebPage"
+					target="blank" class="three columns" style="text-decoration: none;">
 					<div class="box">
 						<div class="project-box">
-							<img src="https://velog.velcdn.com/images/yunlinit/post/7a6736e5-6eec-4a27-b6e3-ba1a0068979f/image.png"
+							<img
+								src="https://velog.velcdn.com/images/yunlinit/post/7a6736e5-6eec-4a27-b6e3-ba1a0068979f/image.png"
 								style="width: 220px; height: 120px; object-fit: auto; border-radius: 10px;" />
 						</div>
-					</div>
-					<br>
+					</div> <br>
 					<h4>My Portfolio</h4>
-					<p style="font-family: Pretendard">👩🏻‍💻 장윤린의 웹 포트폴리오</p>
-					<span class="icon"></span>
+					<p style="font-family: Pretendard; font-weight: 600;">👩🏻‍💻
+						장윤린의 웹 포트폴리오</p> <span class="icon"></span>
 				</a>
 			</div>
-			
+
+			<!-- second row -->
+			<div class="row">
+				<a href="https://supreme-meat-4a7.notion.site/Prion-7e4cd98d0a674339aeffded603eb4efd"
+					target="blank" class="three columns" style="text-decoration: none;">
+					<div class="box">
+						<div class="project-box">
+							<img class="project-img"
+								src="https://velog.velcdn.com/images/yunlinit/post/aa642583-c3c4-47e8-af33-4aebcc0efaed/image.PNG"
+								style="width: 220px; height: 120px; object-fit: auto; border-radius: 10px;" />
+						</div>
+					</div> <br>
+					<h5>[외주] Prion</h5>
+					<p style="font-family: Pretendard; font-weight: 600;">(주)프리온 회사 소개 및 제조 설비 관련 내용을 담은 홈페이지 제작 의뢰 </p> <span class="icon"></span>
+
+				</a>
+
+			</div>
+
 		</div>
+
+
 	</section>
-
-
 
 	<!-- Contact Section
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<style>
-.button-primary{
-background-color: black;
+	<style>
+.button-primary {
+	background-color: black;
 }
 </style>
 
-
 	<section id="contact">
 		<div class="container">
-			<h1>Contact</h1>
+			<h1>Contact*</h1>
 			<div class="block"></div>
-			 <form class="gform" method="POST" data-email="yunlinit@gmail.com"
-            action="https://script.google.com/macros/s/AKfycbxkZTwkACh8C2St2dGm8mxtr3Yuj91yE1f92s-gEhghKd0kle5RHSEXSTuwGjPdZwlmxA/exec">
+			<form class="gform" method="POST" data-email="yunlinit@gmail.com"
+				action="https://script.google.com/macros/s/AKfycbxkZTwkACh8C2St2dGm8mxtr3Yuj91yE1f92s-gEhghKd0kle5RHSEXSTuwGjPdZwlmxA/exec">
 				<div class="row">
 					<div class="six columns">
-						<label for="exampleRecipientInput">Name</label>
-						<input class="u-full-width" type="text" autocomplete="off" placeholder="이름을 입력해주세요"  name="name"/>
+						<label for="exampleRecipientInput">Name</label> <input
+							class="u-full-width" type="text" autocomplete="off"
+							placeholder="이름을 입력해주세요" name="name" />
 					</div>
 					<div class="six columns">
-						<label for="exampleRecipientInput">Phone</label>
-						<input class="u-full-width" type="text" autocomplete="off" placeholder="전화번호를 입력해주세요"  name="contact"/>
+						<label for="exampleRecipientInput">Phone</label> <input
+							class="u-full-width" type="text" autocomplete="off"
+							placeholder="전화번호를 입력해주세요" name="contact" />
 					</div>
-					<div class="six columns" style = "margin-left: 0%;">
-						<label for="exampleEmailInput">Email</label>
-						<input class="u-full-width" type="email" autocomplete="off" placeholder="id@email.com" name="email"/>
+					<div class="six columns" style="margin-left: 0%;">
+						<label for="exampleEmailInput">Email</label> <input
+							class="u-full-width" type="email" autocomplete="off"
+							placeholder="id@email.com" name="email" />
 					</div>
 				</div>
 				<div class="row">
@@ -1279,13 +1337,9 @@ background-color: black;
 			</form>
 		</div>
 	</section>
-	
-
 
 	<!-- Footer Section
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-
-
 
 	<footer>
 		<div class="container">
@@ -1294,40 +1348,39 @@ background-color: black;
 				<p>Copyright © CHANG YUN LIN. All Right Reserved.</p>
 			</div>
 			<div class="three columns">
-				<a href ="https://github.com/yunlinIT" target="blank" class="icon">GitHub</a> &nbsp;&nbsp;
-				<a href ="https://velog.io/@yunlinit" target="blank" class="icon">Velog</a> &nbsp;&nbsp;
-				<a href ="https://www.youtube.com/@yunlinit" target="blank" class="icon">YouTube</a> &nbsp;&nbsp;
+				<a href="https://github.com/yunlinIT" target="blank" class="icon">GitHub</a>
+				&nbsp;&nbsp; <a href="https://velog.io/@yunlinit" target="blank"
+					class="icon">Velog</a> &nbsp;&nbsp; <a
+					href="https://www.youtube.com/@yunlinit" target="blank"
+					class="icon">YouTube</a> &nbsp;&nbsp;
 			</div>
 		</div>
 	</footer>
 
 	<!-- Mouse Cursor
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<!-- <img src="https://cur.cursors-4u.net/cursor.png" border="0" alt="Purple Spinning Heart Within A Heart" style="position:absolute; top: 0px; right: 0px;" /> -->
+	<!-- <img src="https://cur.cursors-4u.net/cursor.png" border="0" alt="Purple Spinning Heart Within A Heart" style="position:absolute; top: 0px; right: 0px;" /> -->
 
-<img src="https://cur.cursors-4u.net/cursor.png" border="0" alt="Light Red Pointer" style="position:absolute; top: 0px; right: 0px;" />
-
-
+	<img src="https://cur.cursors-4u.net/cursor.png" border="0"
+		alt="Light Red Pointer"
+		style="position: absolute; top: 0px; right: 0px;" />
 
 	<!-- Send Email Alert Javascript
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-<script>
-document.querySelector(".gform").addEventListener("submit", function(event) {
-    var checkbox = document.getElementById("checkbox");
-        // 이메일 전송 알림
-        setTimeout(function() {
-            alert("이메일이 성공적으로 전송되었습니다!");
-            document.getElementById("submitBtn").disabled = false; // 문의하기 버튼 활성화
-            document.getElementById("backBtn").disabled = false; // 뒤로가기 버튼 활성화
-        }, 100); // 1초 후에 알림을 표시합니다.
-  
-});
-</script> 
-
-
+	<script>
+		document.querySelector(".gform").addEventListener("submit",
+				function(event) {
+					var checkbox = document.getElementById("checkbox");
+					// 이메일 전송 알림
+					setTimeout(function() {
+						alert("이메일이 성공적으로 전송되었습니다!");
+						document.getElementById("submitBtn").disabled = false; // 문의하기 버튼 활성화
+						document.getElementById("backBtn").disabled = false; // 뒤로가기 버튼 활성화
+					}, 100); // 1초 후에 알림을 표시합니다.
+				});
+	</script>
 
 </body>
+
 </html>
-
-

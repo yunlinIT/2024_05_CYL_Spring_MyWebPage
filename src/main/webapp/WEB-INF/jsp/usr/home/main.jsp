@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:set var="pageTitle" value="장윤린의 Portfolio"></c:set>
+
+
 <%@ include file="../common/head.jspf"%>
 
 <!-- 우클릭 & 드래그 방지 -->
@@ -147,17 +149,17 @@ body {
 <div class="box-detail">
 	<div class="p-title">Portfolio*</div>
 	<div class="shot-dest">I'm a Back-end and Front-end web developer Chang Yun Lin</div>
-	<a href="/usr/home/aboutMe" class="button">More about me</a>
+	<a href="https://yunlinit.github.io/portfolio/" class="button">More about me</a>
+<!-- 	<a href="../home/aboutMe" class="button">GO</a> -->
 </div>
 
 
 	<!-- Mouse Cursor
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<!-- <img src="https://cur.cursors-4u.net/cursor.png" border="0" alt="Purple Spinning Heart Within A Heart" style="position:absolute; top: 0px; right: 0px;" /> -->
+
 
 <img src="https://cur.cursors-4u.net/cursor.png" border="0" alt="Light Red Pointer" style="position:absolute; top: 0px; right: 0px;" />
 
 </body>
 </html>
 
-<%-- <%@ include file="../common/foot.jspf"%> --%>
