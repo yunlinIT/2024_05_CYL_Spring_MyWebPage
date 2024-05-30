@@ -577,10 +577,12 @@ nav ul a:hover {
 	align-items: center;
 	justify-content: center;
 	height: 600px;
-	width: 100vw;
+	width: 100%;
 	/* 화면의 가로 길이를 100%로 설정 */
 	padding: 50px 0px;
 	/* 필요에 따라 주석을 해제 */
+
+	
 }
 
 @media ( max-width : 991px) {
@@ -603,9 +605,9 @@ nav ul a:hover {
 }
 
 .flex-container {
-	gap: 20px;
+	gap: 10px;
 	display: flex;
-	max-width: 100%;
+	width: 100%;
 }
 
 @media ( max-width : 991px) {
@@ -1188,7 +1190,7 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 			<div class="block"></div>
 		</div>
 		<img
-			src="https://velog.velcdn.com/images/yunlinit/post/7d06f223-f06d-499a-8a8c-4551c04bbcd9/image.png"
+			src="https://velog.velcdn.com/images/yunlinit/post/543e2881-2ecb-4c78-bcff-be8164e73b8a/image.png"
 			style="width: 100%;" alt="Services Image">
 		</div>
 	</section>
