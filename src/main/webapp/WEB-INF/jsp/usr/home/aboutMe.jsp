@@ -4,6 +4,16 @@
 <c:set var="pageTitle" value="장윤린의 Portfolio"></c:set>
 <%@ include file="../common/head.jspf"%>
 
+<!-- CSS 불러오기 -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/typicons/2.0.8/typicons.min.css">
+
+<!-- JS 불러오기 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
 
 <script data-cfasync="false" type="text/javascript"
 	src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
@@ -1897,7 +1907,21 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 				<p style="font-family: Urbanist">Click to visit the repository
 					of each project.</p>
 			</div>
+			
+			<!-- first row -->
+			<div class="row">
+				<a href="https://g-sa.koreaisacademy.com/community/project_view.asp?idxnum=251&clkMater=&txtMenu=&txtCurPage=1&selMater="
+					target="blank" class="three columns" style="text-decoration: none; margin-bottom: -30px;">
+					<p style="font-family: Pretendard; font-weight: 600;">✨ 코리아IT아카데미 </br>[수강생프로젝트] 소개</p> <span class="icon"></span>
 
+				</a> 
+				<a href="https://g-sa.koreaisacademy.com/community/project_view.asp?idxnum=245&clkMater=&txtMenu=&txtCurPage=1&selMater="
+					target="blank" class="three columns" style="text-decoration: none; margin-bottom: -30px;">
+					<p style="font-family: Pretendard; font-weight: 600;">✨ 코리아IT아카데미 </br>[수강생프로젝트] 소개 </p> <span class="icon"></span>
+
+				</a> 
+			</div>
+			
 			<!-- first row -->
 			<div class="row">
 				<a href="https://github.com/yunlinIT/2024_01_Spring_Crema"
@@ -1911,7 +1935,7 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 					</div> <br>
 					<h4>Crema</h4>
 					<p style="font-family: Pretendard; font-weight: 600;">☕ 날씨 기반
-						대전 카페 추천 및 테마별 카페검색 플랫폼</p> <span class="icon"></span>
+						대전 카페 추천 및 테마별 카페검색 플랫폼 <br> 📌 GitHub 바로가기</p> <span class="icon"></span>
 
 				</a> <a href="https://github.com/fake150907/Trip_Angle_24_04"
 					target="blank" class="three columns" style="text-decoration: none;">
@@ -1924,7 +1948,7 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 					</div> <br>
 					<h4>TripAngle</h4>
 					<p style="font-family: Pretendard; font-weight: 600;">🛫 GPT
-						기반의 여행, 패션, 날씨 통합 추천 서비스</p> <span class="icon"></span>
+						기반의 여행, 패션, 날씨 통합 추천 서비스 <br> 📌 GitHub 바로가기 </p> <span class="icon"></span>
 
 				</a> <a href="https://github.com/yunlinIT/todoapp_2024_04"
 					target="blank" class="three columns" style="text-decoration: none;">
@@ -1937,7 +1961,7 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 					</div> <br>
 					<h4>My TODO List !</h4>
 					<p style="font-family: Pretendard; font-weight: 600;">📝 직관적으로
-						사용가능 한 할일 목록 앱</p> <span class="icon"></span>
+						사용가능 한 할일 목록 앱 <br> 📌 GitHub 바로가기 </p> <span class="icon"></span>
 
 				</a> <a href="https://github.com/yunlinIT/2024_05_Spring_MyWebPage"
 					target="blank" class="three columns" style="text-decoration: none;">
@@ -1950,14 +1974,14 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 					</div> <br>
 					<h4>My Portfolio</h4>
 					<p style="font-family: Pretendard; font-weight: 600;">👩🏻‍💻
-						장윤린의 웹 포트폴리오</p> <span class="icon"></span>
+						장윤린의 웹 포트폴리오 <br><br> 📌 GitHub 바로가기</p> <span class="icon"></span>
 				</a>
 			</div>
 
 			<!-- second row -->
-			<div class="row">
-				<a
-					href="https://supreme-meat-4a7.notion.site/Prion-7e4cd98d0a674339aeffded603eb4efd"
+			<div class="row" style="margin-top:10px;">
+		
+				<a href="https://supreme-meat-4a7.notion.site/Prion-7e4cd98d0a674339aeffded603eb4efd"
 					target="blank" class="three columns" style="text-decoration: none;">
 					<div class="box">
 						<div class="project-box">
@@ -1968,7 +1992,7 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 					</div> <br>
 					<h5>[외주] Prion</h5>
 					<p style="font-family: Pretendard; font-weight: 600;">(주)프리온 회사
-						소개 및 제조 설비 관련 내용을 담은 홈페이지 제작 의뢰</p> <span class="icon"></span>
+						소개 및 제조 설비 관련 내용을 담은 홈페이지 제작 의뢰 <br> 📌 Notion 바로가기</p> <span class="icon"></span>
 
 				</a>
 
